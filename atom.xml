@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cmu-ruoyan-lgl.github.io/"/>
-  <updated>2019-11-09T12:53:13.018Z</updated>
+  <updated>2019-11-11T10:47:56.370Z</updated>
   <id>https://cmu-ruoyan-lgl.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fpx</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/11/fpx/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/11/fpx/</id>
+    <published>2019-11-11T10:47:56.000Z</published>
+    <updated>2019-11-11T10:47:56.370Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>lgl like zzw</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/11/sksk/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/11/sksk/</id>
+    <published>2019-11-11T10:33:20.000Z</published>
+    <updated>2019-11-11T10:38:01.990Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>刘格磊牛皮</title>
@@ -50,6 +80,27 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客新建文章并发布</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2018/12/06/zzw/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2018/12/06/zzw/</id>
+    <published>2018-12-06T04:16:12.000Z</published>
+    <updated>2019-11-11T10:41:27.961Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="搭建博客" scheme="https://cmu-ruoyan-lgl.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo" scheme="https://cmu-ruoyan-lgl.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="https://cmu-ruoyan-lgl.github.io/tags/Markdown/"/>
     
   </entry>
   
