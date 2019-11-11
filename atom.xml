@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cmu-ruoyan-lgl.github.io/"/>
-  <updated>2019-11-11T10:47:56.370Z</updated>
+  <updated>2019-11-11T12:34:40.274Z</updated>
   <id>https://cmu-ruoyan-lgl.github.io/</id>
   
   <author>
@@ -17,47 +17,55 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>fpx</title>
-    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/11/fpx/"/>
-    <id>https://cmu-ruoyan-lgl.github.io/2019/11/11/fpx/</id>
-    <published>2019-11-11T10:47:56.000Z</published>
-    <updated>2019-11-11T10:47:56.370Z</updated>
+    <title>想妳</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/11/%E6%83%B3%E4%BD%A0/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/11/想你/</id>
+    <published>2019-11-11T10:47:56.363Z</published>
+    <updated>2019-11-11T12:34:40.274Z</updated>
+    
+    <content type="html"><![CDATA[<p>我好想妳<br>我好想用力抱住妳<br>永远永远</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">螃蟹在剥我的壳，</span><br><span class="line">笔记本在写我，</span><br><span class="line">漫天的我落在枫叶上雪花上，</span><br><span class="line">而你在想我。</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;我好想妳&lt;br&gt;我好想用力抱住妳&lt;br&gt;永远永远&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
     </summary>
     
+    
+      <category term="随笔" scheme="https://cmu-ruoyan-lgl.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
   
   <entry>
-    <title>lgl like zzw</title>
-    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/11/sksk/"/>
-    <id>https://cmu-ruoyan-lgl.github.io/2019/11/11/sksk/</id>
-    <published>2019-11-11T10:33:20.000Z</published>
-    <updated>2019-11-11T10:38:01.990Z</updated>
+    <title>博客思路</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/11/zzw/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/11/zzw/</id>
+    <published>2019-11-11T10:41:27.961Z</published>
+    <updated>2019-11-11T12:30:05.111Z</updated>
+    
+    <content type="html"><![CDATA[<p>分类categories{<br>    野生技术: 博客搭建 师承<a href="https://www.lixint.me/hexo-blog.html" target="_blank" rel="noopener">https://www.lixint.me/hexo-blog.html</a><br>    竞赛 :<br>    竞赛题 记录算法,有趣的题目<br>    随笔: 其他<br>}<br>标签tags{<br>    算法<br>    比赛<br>    模板<br>    博客搭建等<br>}</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;分类categories{&lt;br&gt;    野生技术: 博客搭建 师承&lt;a href=&quot;https://www.lixint.me/hexo-blog.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.lixint.me/hex
+      
     
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>刘格磊牛皮</title>
-    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/09/%E5%88%98%E6%A0%BC%E7%A3%8A%E7%89%9B%E7%9A%AE/"/>
-    <id>https://cmu-ruoyan-lgl.github.io/2019/11/09/刘格磊牛皮/</id>
-    <published>2019-11-09T12:53:12.000Z</published>
-    <updated>2019-11-09T12:53:13.018Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
+      <category term="blog搭建" scheme="https://cmu-ruoyan-lgl.github.io/categories/blog%E6%90%AD%E5%BB%BA/"/>
     
     
+      <category term="Hexo" scheme="https://cmu-ruoyan-lgl.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="https://cmu-ruoyan-lgl.github.io/tags/Markdown/"/>
     
   </entry>
   
@@ -80,27 +88,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客新建文章并发布</title>
-    <link href="https://cmu-ruoyan-lgl.github.io/2018/12/06/zzw/"/>
-    <id>https://cmu-ruoyan-lgl.github.io/2018/12/06/zzw/</id>
-    <published>2018-12-06T04:16:12.000Z</published>
-    <updated>2019-11-11T10:41:27.961Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="搭建博客" scheme="https://cmu-ruoyan-lgl.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="Hexo" scheme="https://cmu-ruoyan-lgl.github.io/tags/Hexo/"/>
-    
-      <category term="Markdown" scheme="https://cmu-ruoyan-lgl.github.io/tags/Markdown/"/>
     
   </entry>
   
