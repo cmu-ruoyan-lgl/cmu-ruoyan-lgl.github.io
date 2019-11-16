@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cmu-ruoyan-lgl.github.io/"/>
-  <updated>2019-11-14T13:01:47.148Z</updated>
+  <updated>2019-11-16T13:57:35.854Z</updated>
   <id>https://cmu-ruoyan-lgl.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P3373【模板】线段树2</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/16/P3373%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%912/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/16/P3373【模板】线段树2/</id>
+    <published>2019-11-16T13:53:22.000Z</published>
+    <updated>2019-11-16T13:57:35.854Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="洛谷P3373-区间加减乘"><a href="#洛谷P3373-区间加减乘" class="headerlink" title="洛谷P3373 区间加减乘"></a>洛谷P3373 区间加减乘</h2><pre><code class="bash"><span class="comment">#include &lt;cstdio&gt;</span><span class="comment">#include &lt;algorithm&gt;</span>using namespace std;<span class="comment">#define lr rt &lt;&lt; 1</span><span class="comment">#define rr rt &lt;&lt; 1 | 1</span><span class="comment">#define lson l, m, rt &lt;&lt; 1</span><span class="comment">#define rson m + 1, r, rt &lt;&lt; 1 | 1</span>typedef long long LL;const int maxn = 500007;namespace _lgl{    int N, M, P, a, b, c;    LL sum[maxn &lt;&lt; 2], add[maxn &lt;&lt; 2], mul[maxn &lt;&lt; 2];    inline void up(int rt){        sum[rt] = sum[lr] + sum[rr];    }    inline void down(int rt, int m){        <span class="keyword">if</span>(mul[rt] != 1){            LL s = mul[rt];//            add[rt] = (add[rt] * s) % P;            mul[lr] = (mul[lr] * s) % P;            mul[rr] = (mul[rr] * s) % P;            add[lr] = (add[lr] * s) % P;            add[rr] = (add[rr] * s) % P;            sum[lr] = (sum[lr] * s) % P;            sum[rr] = (sum[rr] * s) % P;            mul[rt] = 1;        }        <span class="keyword">if</span>(add[rt]){            LL s = add[rt];            add[lr] = (add[lr] + s) % P;            add[rr] = (add[rr] + s) % P;            sum[lr] = (sum[lr] + (add[rt] * (m - (m &gt;&gt; 1)))) % P;             sum[rr] = (sum[rr] + (add[rt] * (m &gt;&gt; 1))) % P;            add[rt] = 0;        }    }    /*inline void down(int rt, int m){        <span class="keyword">if</span>(mul[rt] != 1){            add[rt] = add[rt] * mul[rt] % P;            sum[lr] = sum[lr] * mul[rt] % P;            sum[rr] *= mul[rt]%P;            add[lr] *= mul[rt]%P;            add[rr] *= mul[rt]%P;             mul[lr] *= mul[rt]%P;            mul[rr] *= mul[rt]%P;            mul[rt] = 1;        }        <span class="keyword">if</span>(add[rt]){            add[lr] += add[rt]%P;            add[rr] += add[rt]%P;            sum[lr] += add[rt] * (m - (m &gt;&gt; 1)) % P;            sum[rr] += add[rt] * (m &gt;&gt; 1) % P;            add[rt] = 0;        }    }*/    inline void build(int l, int r, int rt){        mul[rt] = 1;        <span class="keyword">if</span>(l == r){            scanf(<span class="string">"%lld"</span>,&amp;sum[rt]);            <span class="built_in">return</span>;        }        int m = (l + r) &gt;&gt; 1;        build(lson);        build(rson);        up(rt);    }    inline void update_1(int L, int R, int c, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) {            add[rt] = (add[rt] + c) % P;            sum[rt] = (sum[rt] + (LL) c * (r - l + 1))%P;            <span class="built_in">return</span>;        }        down(rt, r - l + 1);        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) update_1(L, R, c, lson);        <span class="keyword">if</span>(m &lt;  R) update_1(L, R, c, rson);        up(rt);    }    inline void update_2(int L, int R, int c, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R){            mul[rt] = (mul[rt] * c) % P;            add[rt] = (add[rt] * c) % P;            sum[rt] = (sum[rt] * c) % P;            <span class="built_in">return</span>;        }        down(rt, r - l + 1);        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) update_2(L, R, c, lson);        <span class="keyword">if</span>(m  &lt; R) update_2(L, R, c, rson);        up(rt);    }    inline LL query(int L, int R, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) <span class="built_in">return</span> sum[rt];        down(rt, r - l + 1);        LL ret = 0;        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) ret = ret + (query(L, R, lson))%P;        <span class="keyword">if</span>(m &lt;  R) ret = ret + (query(L, R, rson))%P;        <span class="built_in">return</span> ret%P;    }    inline void <span class="function"><span class="title">main</span></span>(){        freopen(<span class="string">"testdata.in.txt"</span>,<span class="string">"r"</span>,stdin);        scanf(<span class="string">"%d%d%d"</span>,&amp;N,&amp;M,&amp;P);        build(1, N, 1);        <span class="keyword">while</span>(M--){            scanf(<span class="string">"%d"</span>,&amp;a);            <span class="keyword">if</span>(a == 2){                scanf(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);                update_1(a, b, c, 1, N, 1);            }<span class="keyword">else</span> <span class="keyword">if</span>(a == 1){                scanf(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);                update_2(a, b, c, 1, N, 1);            }<span class="keyword">else</span>{                scanf(<span class="string">"%d%d"</span>,&amp;a,&amp;b);                <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,query(a, b, 1, N, 1)%P);            }            }    }}int <span class="function"><span class="title">main</span></span>(){    _lgl::main();    <span class="built_in">return</span> 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      洛谷P3373 区间加减乘
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="https://cmu-ruoyan-lgl.github.io/categories/ACM/"/>
+    
+    
+      <category term="线段树" scheme="https://cmu-ruoyan-lgl.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【模板】线段树1</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/16/P3372%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%911/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/16/P3372【模板】线段树1/</id>
+    <published>2019-11-16T13:44:47.000Z</published>
+    <updated>2019-11-16T13:49:25.098Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简单的区间加减"><a href="#简单的区间加减" class="headerlink" title="简单的区间加减"></a>简单的区间加减</h2><pre><code class="bash"><span class="comment">#include &lt;cstdio&gt;</span><span class="comment">#include &lt;algorithm&gt;</span>using namespace std;<span class="comment">#define LL long long</span><span class="comment">#define lr rt &lt;&lt; 1</span><span class="comment">#define rr rt &lt;&lt; 1 | 1</span><span class="comment">#define lson l, m, rt &lt;&lt; 1</span><span class="comment">#define rson m + 1, r, rt &lt;&lt; 1 | 1</span>const int maxn = 1e5 + 7;int N, M, n, m;LL add[maxn &lt;&lt; 2], sum[maxn &lt;&lt; 2];namespace _lgl{    inline void pushup(int rt){        sum[rt] = sum[lr] + sum[rr];    }    inline void pushdown(int rt,int m){        <span class="keyword">if</span>(add[rt]) {            add[lr] += add[rt];            add[rr] += add[rt];            sum[lr] += add[rt] * (m - (m &gt;&gt; 1));            sum[rr] += add[rt] * (m &gt;&gt; 1);             add[rt] = 0;        }    }    inline void build(int l,int r,int rt){        <span class="keyword">if</span>(l == r){            scanf(<span class="string">"%lld"</span>,&amp;sum[rt]);            <span class="built_in">return</span>;        }        int m = (l + r) &gt;&gt; 1;        build(lson);        build(rson);        pushup(rt);    }    inline void update(int L, int R, int c, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) {            add[rt] += c;            sum[rt] += (LL) c * (r - l + 1);            <span class="built_in">return</span>;        }        pushdown(rt, r - l + 1);        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) update(L, R, c, lson);        <span class="keyword">if</span>(m &lt; R) update(L, R, c, rson);        pushup(rt);    }    inline LL query(int L, int R, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) <span class="built_in">return</span> sum[rt];        pushdown(rt, r - l + 1);        LL ret = 0;        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) ret += query(L, R, lson);        <span class="keyword">if</span>(m &lt;  R) ret += query(L, R, rson);        <span class="built_in">return</span> ret;    }    inline void <span class="function"><span class="title">main</span></span>(){        scanf(<span class="string">"%d%d"</span>,&amp;N,&amp;M);        build(1, N, 1);        <span class="keyword">while</span>(M --){            int a, b, c, skt;            scanf(<span class="string">"%d"</span>,&amp;skt);            <span class="keyword">if</span>(skt == 2){                scanf(<span class="string">"%d%d"</span>,&amp;a,&amp;b);                <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,query(a, b, 1, N, 1));            }<span class="keyword">else</span>{                scanf(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);                update(a, b, c, 1, N, 1);            }        }        <span class="built_in">return</span>;    }}int <span class="function"><span class="title">main</span></span>(){    _lgl::main();    <span class="built_in">return</span> 0;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      洛谷P3373 简单的区间加减
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="https://cmu-ruoyan-lgl.github.io/categories/ACM/"/>
+    
+    
+      <category term="线段树" scheme="https://cmu-ruoyan-lgl.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>EK - Edmond-Karp</title>

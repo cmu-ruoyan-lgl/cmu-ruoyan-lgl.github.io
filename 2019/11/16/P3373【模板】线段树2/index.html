@@ -51,18 +51,18 @@
   };
 </script>
 
-  <meta name="description" content="单源最大流&#x2F;&#x2F; EK(Edmond-Karp) : 利用bfs实现，时间复杂度O（V*E^2） #include &amp;lt;cstdio&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;queue&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;cctype&amp;gt; #include &amp;lt;algorithm&amp;gt; #de">
-<meta name="keywords" content="网络流">
+  <meta name="description" content="洛谷P3373 区间加减乘">
+<meta name="keywords" content="线段树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EK - Edmond-Karp">
-<meta property="og:url" content="https:&#x2F;&#x2F;cmu-ruoyan-lgl.github.io&#x2F;2019&#x2F;11&#x2F;13&#x2F;%E7%BD%91%E7%BB%9C%E6%B5%81EK&#x2F;index.html">
+<meta property="og:title" content="P3373【模板】线段树2">
+<meta property="og:url" content="https:&#x2F;&#x2F;cmu-ruoyan-lgl.github.io&#x2F;2019&#x2F;11&#x2F;16&#x2F;P3373%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%912&#x2F;index.html">
 <meta property="og:site_name" content="_lgl の blog">
-<meta property="og:description" content="单源最大流&#x2F;&#x2F; EK(Edmond-Karp) : 利用bfs实现，时间复杂度O（V*E^2） #include &amp;lt;cstdio&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;queue&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;cctype&amp;gt; #include &amp;lt;algorithm&amp;gt; #de">
+<meta property="og:description" content="洛谷P3373 区间加减乘">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T13:01:47.148Z">
+<meta property="og:updated_time" content="2019-11-16T13:57:35.854Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://cmu-ruoyan-lgl.github.io/2019/11/13/%E7%BD%91%E7%BB%9C%E6%B5%81EK/">
+<link rel="canonical" href="https://cmu-ruoyan-lgl.github.io/2019/11/16/P3373%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%912/">
 
 
 <script id="page-configurations">
@@ -76,7 +76,7 @@
   };
 </script>
 
-  <title>EK - Edmond-Karp | _lgl の blog</title>
+  <title>P3373【模板】线段树2 | _lgl の blog</title>
   
 
 
@@ -207,7 +207,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cmu-ruoyan-lgl.github.io/2019/11/13/%E7%BD%91%E7%BB%9C%E6%B5%81EK/">
+    <link itemprop="mainEntityOfPage" href="https://cmu-ruoyan-lgl.github.io/2019/11/16/P3373%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%912/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/fengling.jpg">
@@ -220,7 +220,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          EK - Edmond-Karp
+          P3373【模板】线段树2
         </h1>
 
         <div class="post-meta">
@@ -229,16 +229,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-11-13 18:50:14" itemprop="dateCreated datePublished" datetime="2019-11-13T18:50:14+08:00">2019-11-13</time>
+              <time title="创建时间：2019-11-16 21:53:22 / 修改时间：21:57:35" itemprop="dateCreated datePublished" datetime="2019-11-16T21:53:22+08:00">2019-11-16</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-14 21:01:47" itemprop="dateModified" datetime="2019-11-14T21:01:47+08:00">2019-11-14</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -252,6 +246,7 @@
             </span>
 
           
+            <div class="post-description">洛谷P3373 区间加减乘</div>
 
         </div>
       </header>
@@ -262,86 +257,135 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="单源最大流"><a href="#单源最大流" class="headerlink" title="单源最大流"></a>单源最大流</h2><pre><code class="bash">// EK(Edmond-Karp) : 利用bfs实现，时间复杂度O（V*E^2）
-<span class="comment">#include &lt;cstdio&gt;</span>
-<span class="comment">#include &lt;iostream&gt;</span>
-<span class="comment">#include &lt;queue&gt;</span>
-<span class="comment">#include &lt;cstring&gt;</span>
-<span class="comment">#include &lt;cctype&gt;</span>
+        <h2 id="洛谷P3373-区间加减乘"><a href="#洛谷P3373-区间加减乘" class="headerlink" title="洛谷P3373 区间加减乘"></a>洛谷P3373 区间加减乘</h2><pre><code class="bash"><span class="comment">#include &lt;cstdio&gt;</span>
 <span class="comment">#include &lt;algorithm&gt;</span>
-<span class="comment">#define rg register</span>
-
-const int maxn = 1e5 + 7;
-const int inf = 2147483647;
 using namespace std;
+
+<span class="comment">#define lr rt &lt;&lt; 1</span>
+<span class="comment">#define rr rt &lt;&lt; 1 | 1</span>
+<span class="comment">#define lson l, m, rt &lt;&lt; 1</span>
+<span class="comment">#define rson m + 1, r, rt &lt;&lt; 1 | 1</span>
+typedef long long LL;
+const int maxn = 500007;
 
 namespace _lgl{
 
-    int n, m, s, t, tot, head[maxn]; 
-    bool vis[maxn];
+    int N, M, P, a, b, c;
+    LL sum[maxn &lt;&lt; 2], add[maxn &lt;&lt; 2], mul[maxn &lt;&lt; 2];
 
-    struct edge{
-        int to, val, next;
-    }e[maxn &lt;&lt; 1];
-
-    struct Pre{
-        int point, edge;
-    }pre[maxn];
-
-    inline void add(int x,int y,int z){
-        e[++tot].to = y;
-        e[tot].next = head[x];
-        e[tot].val  = z;
-        head[x] = tot;
+    inline void up(int rt){
+        sum[rt] = sum[lr] + sum[rr];
     }
 
-    inline int <span class="function"><span class="title">rd</span></span>(){
-        int f = 1, s = 0; char c = getchar();
-        <span class="keyword">for</span>(;!isdigit(c);c = getchar()) <span class="keyword">if</span>(c == <span class="string">'-'</span>) f = -1;
-        <span class="keyword">for</span>(; isdigit(c);c = getchar()) s = (s &lt;&lt; 3) + (s &lt;&lt; 1) + c - <span class="string">'0'</span>;
-        <span class="built_in">return</span> f * s;
-    }
-
-    inline bool <span class="function"><span class="title">bfs</span></span>(){
-        queue &lt;int&gt; q; 
-        memset(vis, 0, sizeof(vis));
-        memset(pre,-1, sizeof(pre));
-        vis[s] = <span class="literal">true</span>; q.push(s);
-        <span class="keyword">while</span>(!q.empty()){
-            int now = q.front(); q.pop();
-            <span class="keyword">for</span>(int i = head[now]; i; i = e[i].next){
-                int to = e[i].to;
-                <span class="keyword">if</span>(!vis[to] &amp;&amp; e[i].val){
-                    pre[to].point = now;
-                    pre[to].edge  = i;
-                    <span class="keyword">if</span>(to == t) <span class="built_in">return</span> <span class="literal">true</span>;
-                    vis[to] = 1;
-                    q.push(to);
-                }
-            }
+    inline void down(int rt, int m){
+        <span class="keyword">if</span>(mul[rt] != 1){
+            LL s = mul[rt];
+//            add[rt] = (add[rt] * s) % P;
+            mul[lr] = (mul[lr] * s) % P;
+            mul[rr] = (mul[rr] * s) % P;
+            add[lr] = (add[lr] * s) % P;
+            add[rr] = (add[rr] * s) % P;
+            sum[lr] = (sum[lr] * s) % P;
+            sum[rr] = (sum[rr] * s) % P;
+            mul[rt] = 1;
         }
+        <span class="keyword">if</span>(add[rt]){
+            LL s = add[rt];
+            add[lr] = (add[lr] + s) % P;
+            add[rr] = (add[rr] + s) % P;
+            sum[lr] = (sum[lr] + (add[rt] * (m - (m &gt;&gt; 1)))) % P; 
+            sum[rr] = (sum[rr] + (add[rt] * (m &gt;&gt; 1))) % P;
+            add[rt] = 0;
+        }
+
     }
 
-    inline int <span class="function"><span class="title">EK</span></span>(){
-        int ans = 0;
-        <span class="keyword">while</span>(bfs()){
-            int mi = inf;
-            <span class="keyword">for</span>(int i = t; i != s; i = pre[i].point) mi = mi &lt; e[pre[i].edge].val ? mi : e[pre[i].edge].val;
-            <span class="keyword">for</span>(int i = t; i != s; i = pre[i].point){
-                e[pre[i].edge].val -= mi;
-                e[pre[i].edge^1].val += mi;
-            }
-            ans += mi;
+    /*inline void down(int rt, int m){
+        <span class="keyword">if</span>(mul[rt] != 1){
+            add[rt] = add[rt] * mul[rt] % P;
+            sum[lr] = sum[lr] * mul[rt] % P;
+            sum[rr] *= mul[rt]%P;
+            add[lr] *= mul[rt]%P;
+            add[rr] *= mul[rt]%P; 
+            mul[lr] *= mul[rt]%P;
+            mul[rr] *= mul[rt]%P;
+            mul[rt] = 1;
         }
-        <span class="built_in">return</span> ans;
+        <span class="keyword">if</span>(add[rt]){
+            add[lr] += add[rt]%P;
+            add[rr] += add[rt]%P;
+            sum[lr] += add[rt] * (m - (m &gt;&gt; 1)) % P;
+            sum[rr] += add[rt] * (m &gt;&gt; 1) % P;
+            add[rt] = 0;
+        }
+    }*/
+
+    inline void build(int l, int r, int rt){
+        mul[rt] = 1;
+        <span class="keyword">if</span>(l == r){
+            scanf(<span class="string">"%lld"</span>,&amp;sum[rt]);
+            <span class="built_in">return</span>;
+        }
+        int m = (l + r) &gt;&gt; 1;
+        build(lson);
+        build(rson);
+        up(rt);
+    }
+
+    inline void update_1(int L, int R, int c, int l, int r, int rt){
+        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) {
+            add[rt] = (add[rt] + c) % P;
+            sum[rt] = (sum[rt] + (LL) c * (r - l + 1))%P;
+            <span class="built_in">return</span>;
+        }
+        down(rt, r - l + 1);
+        int m = (l + r) &gt;&gt; 1;
+        <span class="keyword">if</span>(L &lt;= m) update_1(L, R, c, lson);
+        <span class="keyword">if</span>(m &lt;  R) update_1(L, R, c, rson);
+        up(rt);
+    }
+
+    inline void update_2(int L, int R, int c, int l, int r, int rt){
+        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R){
+            mul[rt] = (mul[rt] * c) % P;
+            add[rt] = (add[rt] * c) % P;
+            sum[rt] = (sum[rt] * c) % P;
+            <span class="built_in">return</span>;
+        }
+        down(rt, r - l + 1);
+        int m = (l + r) &gt;&gt; 1;
+        <span class="keyword">if</span>(L &lt;= m) update_2(L, R, c, lson);
+        <span class="keyword">if</span>(m  &lt; R) update_2(L, R, c, rson);
+        up(rt);
+    }
+
+    inline LL query(int L, int R, int l, int r, int rt){
+        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) <span class="built_in">return</span> sum[rt];
+        down(rt, r - l + 1);
+        LL ret = 0;
+        int m = (l + r) &gt;&gt; 1;
+        <span class="keyword">if</span>(L &lt;= m) ret = ret + (query(L, R, lson))%P;
+        <span class="keyword">if</span>(m &lt;  R) ret = ret + (query(L, R, rson))%P;
+        <span class="built_in">return</span> ret%P;
     }
 
     inline void <span class="function"><span class="title">main</span></span>(){
-        n = rd(), m = rd(), s = rd(), t = rd();
-        <span class="keyword">for</span>(int x, y, z, i = 1; i &lt;= m; i++)
-            x = rd(), y = rd(), z = rd(), add(x,y,z), add(y,x,0);
-        <span class="built_in">printf</span>(<span class="string">"%d"</span>,EK());
-        <span class="built_in">return</span>;
+        freopen(<span class="string">"testdata.in.txt"</span>,<span class="string">"r"</span>,stdin);
+        scanf(<span class="string">"%d%d%d"</span>,&amp;N,&amp;M,&amp;P);
+        build(1, N, 1);
+        <span class="keyword">while</span>(M--){
+            scanf(<span class="string">"%d"</span>,&amp;a);
+            <span class="keyword">if</span>(a == 2){
+                scanf(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);
+                update_1(a, b, c, 1, N, 1);
+            }<span class="keyword">else</span> <span class="keyword">if</span>(a == 1){
+                scanf(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);
+                update_2(a, b, c, 1, N, 1);
+            }<span class="keyword">else</span>{
+                scanf(<span class="string">"%d%d"</span>,&amp;a,&amp;b);
+                <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,query(a, b, 1, N, 1)%P);
+            }    
+        }
     }
 
 }
@@ -349,8 +393,7 @@ namespace _lgl{
 int <span class="function"><span class="title">main</span></span>(){
     _lgl::main();
     <span class="built_in">return</span> 0;
-}
-</code></pre>
+}</code></pre>
 
     </div>
 
@@ -380,24 +423,21 @@ int <span class="function"><span class="title">main</span></span>(){
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="tag"># 网络流</a>
+              <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag"># 线段树</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/11/%E6%83%B3%E4%BD%A0/" rel="next" title="想妳">
-                  <i class="fa fa-chevron-left"></i> 想妳
+                <a href="/2019/11/16/P3372%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%911/" rel="next" title="【模板】线段树1">
+                  <i class="fa fa-chevron-left"></i> 【模板】线段树1
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/16/P3372%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%911/" rel="prev" title="【模板】线段树1">
-                  【模板】线段树1 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -436,7 +476,7 @@ int <span class="function"><span class="title">main</span></span>(){
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单源最大流"><span class="nav-number">1.</span> <span class="nav-text">单源最大流</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#洛谷P3373-区间加减乘"><span class="nav-number">1.</span> <span class="nav-text">洛谷P3373 区间加减乘</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
