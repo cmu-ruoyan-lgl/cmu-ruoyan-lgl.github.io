@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cmu-ruoyan-lgl.github.io/"/>
-  <updated>2019-11-16T13:57:35.854Z</updated>
+  <updated>2020-02-12T04:38:59.192Z</updated>
   <id>https://cmu-ruoyan-lgl.github.io/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020 新的开始</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2020/01/16/new%20begin/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2020/01/16/new begin/</id>
+    <published>2020-01-15T16:19:31.603Z</published>
+    <updated>2020-02-12T04:38:59.192Z</updated>
+    
+    <content type="html"><![CDATA[<p>也不知道2019年里我改变了多少，依然那么单纯，幻想，焦虑，抑郁，仍然不知道自己现在能不能接受自己，一无是处，一事无成，那有如何呢，都过去了呢，也回不去了呢。</p><p>想过2019年曾自己立了无数个flag，现在又实现了几个，对未来还是好迷茫，感受不到光。</p><p>人生下来有什么意义呢，活着，死去。时间冲刷后又留下了什么，死后又去了哪里？</p><p>最近一直在做噩梦，梦见自己死去，也不知道自己到底梦见了多少回，等我慢慢地由恐惧变成了适应，我也逐渐开始麻木，这样的梦也消失了</p><p>我常常幻想着自己的未来，我的未来是怎样的呢，看着网上的大亨衣食无忧游戏人间，我却只能看到自己未来忙于生计养活自己，我还是没有遇见我心仪的人，一个人潦草度日</p><p>我一直不是一个贫困的人，我愧为人</p><p>不想平庸，却无能为力</p><p>发了那么多牢骚还是带面对现实，唉，晚安世界，或许</p><p>永别世界</p><p>今天早上又起的很晚，制定好的英语计划没有开始就已经结束，拖延症晚期，唉</p><p>去医院做了做检查，中度抑郁，开了半年来士普和百适可，希望能恢复吧</p><p>心态崩了</p><p>``` </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;也不知道2019年里我改变了多少，依然那么单纯，幻想，焦虑，抑郁，仍然不知道自己现在能不能接受自己，一无是处，一事无成，那有如何呢，都过去了呢，也回不去了呢。&lt;/p&gt;
+&lt;p&gt;想过2019年曾自己立了无数个flag，现在又实现了几个，对未来还是好迷茫，感受不到光。&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="sun" scheme="https://cmu-ruoyan-lgl.github.io/categories/sun/"/>
+    
+    
+      <category term="daily" scheme="https://cmu-ruoyan-lgl.github.io/tags/daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>矩阵Matrix</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/27/%E7%9F%A9%E9%98%B5Matrix/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/27/矩阵Matrix/</id>
+    <published>2019-11-27T11:35:47.136Z</published>
+    <updated>2020-02-12T04:38:41.918Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>矩阵</strong></p><h1 id="矩阵-MAtrix"><a href="#矩阵-MAtrix" class="headerlink" title="矩阵 MAtrix"></a>矩阵 MAtrix</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>对于矩阵 <strong>A</strong> ，主对角线是指 <strong>A[i][i]</strong> 的元素。</p><p>一般用<strong>I</strong>来表示单位矩阵，就是主对角线上为 1，其余位置为 0。</p><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><h3 id="矩阵的逆"><a href="#矩阵的逆" class="headerlink" title="矩阵的逆"></a>矩阵的逆</h3><p><strong>A</strong> 的逆矩阵 <strong>P</strong> 是使 <strong>A</strong> X <strong>P</strong> = <strong>I</strong> 的矩阵。</p><p>逆矩阵可以用 <strong>高斯消元</strong> 的方式来求。</p><h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法:"></a>加法:</h3><pre><code>两个均为 N * N 的矩阵 A 与 B， A + B = C，C[i][j] = A[i][j] + B[i][j].</code></pre><h3 id="减法"><a href="#减法" class="headerlink" title="减法:"></a>减法:</h3><pre><code>两个均为 N * N 的矩阵 A 与 B， A - B = C，C[i][j] = A[i][j] - B[i][j].</code></pre><h3 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法:"></a>矩阵乘法:</h3><p>矩阵相乘只有在第一个矩阵的列数和第二个矩阵的行数相同时才有意义。</p><p>设 <strong>A</strong> 为 <strong>P</strong> X <strong>M</strong> 的矩阵，<strong>B</strong>  为 <strong>M</strong> X <strong>Q</strong> 的矩阵，设矩阵  为矩阵 A 与 B 的乘积，</p><p>其中矩阵 <strong>C</strong> 中的第 <strong>i</strong> 行第 <strong>j</strong> 列元素可以表示为:</p><p><img src="/home/aaon/%E6%96%87%E6%A1%A3/assets/1543803099995.png" alt="1"></p>]]></content>
+    
+    <summary type="html">
+    
+      本文介绍线性代数中一个非常重要的内容——矩阵（Matrix），主要讲解矩阵的性质、运算以及在常系数齐次递推式上的应用。
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="https://cmu-ruoyan-lgl.github.io/categories/ACM/"/>
+    
+    
+      <category term="Matrix" scheme="https://cmu-ruoyan-lgl.github.io/tags/Matrix/"/>
+    
+      <category term="Math" scheme="https://cmu-ruoyan-lgl.github.io/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人介绍</title>
+    <link href="https://cmu-ruoyan-lgl.github.io/2019/11/19/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://cmu-ruoyan-lgl.github.io/2019/11/19/个人介绍/</id>
+    <published>2019-11-19T12:25:15.000Z</published>
+    <updated>2019-11-27T11:46:44.694Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="个人简历"><a href="#个人简历" class="headerlink" title="个人简历"></a>个人简历</h1><h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p><strong>姓名</strong>： 刘格磊<br><strong>年龄</strong>：<em>32</em> 岁<br><strong>职业</strong>：A Googler Techlead</p><p><strong>爱好:</strong> </p><ul><li>写blog,打代码</li><li><del>抽烟</del>、喝酒、<del>烫头</del>（<em>头发没了</em>）</li></ul><p><strong>人生格言:</strong> </p><blockquote><p>Be myself</p></blockquote><p><strong>一段代码:</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span>  <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">printf(<span class="string">"Be myself"</span>) <span class="comment"># 人生格言1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">main()</span><br></pre></td></tr></table></figure><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p>1.blog: <em><a href="https://cmu-ruoyan-lgl.github.io">https://cmu-ruoyan-lgl.github.io</a></em><br>2.email: <em><a href="https://hao123.com" target="_blank" rel="noopener">https://cmu.liugelei@gmail.com</a></em></p><h3 id="借钱滚"><a href="#借钱滚" class="headerlink" title="借钱滚"></a>借钱滚</h3><h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><!-- ** 2019年要读的书: ** --><p>** <strong>2019</strong> 年要读的书**</p><ul><li><input checked="" disabled="" type="checkbox"> &lt;&lt;时间简史&gt;&gt;</li><li><input checked="" disabled="" type="checkbox"> &lt;&lt;未来简史&gt;&gt;</li><li>[]  &lt;&lt;今日简史&gt;&gt;</li></ul><p><strong>修订记录:</strong></p><table><thead><tr><th align="center">时间</th><th align="center">内容</th><th align="center">版本</th></tr></thead><tbody><tr><td align="center">2018 年 9 月 15 日</td><td align="center">修订完毕</td><td align="center">v0.1</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      a resume for teachers of CMU
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://cmu-ruoyan-lgl.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="resume" scheme="https://cmu-ruoyan-lgl.github.io/tags/resume/"/>
+    
+  </entry>
   
   <entry>
     <title>P3373【模板】线段树2</title>
@@ -44,13 +120,13 @@
     <link href="https://cmu-ruoyan-lgl.github.io/2019/11/16/P3372%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%911/"/>
     <id>https://cmu-ruoyan-lgl.github.io/2019/11/16/P3372【模板】线段树1/</id>
     <published>2019-11-16T13:44:47.000Z</published>
-    <updated>2019-11-16T13:49:25.098Z</updated>
+    <updated>2019-11-27T11:45:12.484Z</updated>
     
     <content type="html"><![CDATA[<h2 id="简单的区间加减"><a href="#简单的区间加减" class="headerlink" title="简单的区间加减"></a>简单的区间加减</h2><pre><code class="bash"><span class="comment">#include &lt;cstdio&gt;</span><span class="comment">#include &lt;algorithm&gt;</span>using namespace std;<span class="comment">#define LL long long</span><span class="comment">#define lr rt &lt;&lt; 1</span><span class="comment">#define rr rt &lt;&lt; 1 | 1</span><span class="comment">#define lson l, m, rt &lt;&lt; 1</span><span class="comment">#define rson m + 1, r, rt &lt;&lt; 1 | 1</span>const int maxn = 1e5 + 7;int N, M, n, m;LL add[maxn &lt;&lt; 2], sum[maxn &lt;&lt; 2];namespace _lgl{    inline void pushup(int rt){        sum[rt] = sum[lr] + sum[rr];    }    inline void pushdown(int rt,int m){        <span class="keyword">if</span>(add[rt]) {            add[lr] += add[rt];            add[rr] += add[rt];            sum[lr] += add[rt] * (m - (m &gt;&gt; 1));            sum[rr] += add[rt] * (m &gt;&gt; 1);             add[rt] = 0;        }    }    inline void build(int l,int r,int rt){        <span class="keyword">if</span>(l == r){            scanf(<span class="string">"%lld"</span>,&amp;sum[rt]);            <span class="built_in">return</span>;        }        int m = (l + r) &gt;&gt; 1;        build(lson);        build(rson);        pushup(rt);    }    inline void update(int L, int R, int c, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) {            add[rt] += c;            sum[rt] += (LL) c * (r - l + 1);            <span class="built_in">return</span>;        }        pushdown(rt, r - l + 1);        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) update(L, R, c, lson);        <span class="keyword">if</span>(m &lt; R) update(L, R, c, rson);        pushup(rt);    }    inline LL query(int L, int R, int l, int r, int rt){        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) <span class="built_in">return</span> sum[rt];        pushdown(rt, r - l + 1);        LL ret = 0;        int m = (l + r) &gt;&gt; 1;        <span class="keyword">if</span>(L &lt;= m) ret += query(L, R, lson);        <span class="keyword">if</span>(m &lt;  R) ret += query(L, R, rson);        <span class="built_in">return</span> ret;    }    inline void <span class="function"><span class="title">main</span></span>(){        scanf(<span class="string">"%d%d"</span>,&amp;N,&amp;M);        build(1, N, 1);        <span class="keyword">while</span>(M --){            int a, b, c, skt;            scanf(<span class="string">"%d"</span>,&amp;skt);            <span class="keyword">if</span>(skt == 2){                scanf(<span class="string">"%d%d"</span>,&amp;a,&amp;b);                <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,query(a, b, 1, N, 1));            }<span class="keyword">else</span>{                scanf(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);                update(a, b, c, 1, N, 1);            }        }        <span class="built_in">return</span>;    }}int <span class="function"><span class="title">main</span></span>(){    _lgl::main();    <span class="built_in">return</span> 0;}</code></pre>]]></content>
     
     <summary type="html">
     
-      洛谷P3373 简单的区间加减
+      洛谷P3372 简单的区间加减
     
     </summary>
     
@@ -58,7 +134,7 @@
       <category term="ACM" scheme="https://cmu-ruoyan-lgl.github.io/categories/ACM/"/>
     
     
-      <category term="线段树" scheme="https://cmu-ruoyan-lgl.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+      <category term="Segment Tree" scheme="https://cmu-ruoyan-lgl.github.io/tags/Segment-Tree/"/>
     
   </entry>
   
@@ -67,7 +143,7 @@
     <link href="https://cmu-ruoyan-lgl.github.io/2019/11/13/%E7%BD%91%E7%BB%9C%E6%B5%81EK/"/>
     <id>https://cmu-ruoyan-lgl.github.io/2019/11/13/网络流EK/</id>
     <published>2019-11-13T10:50:14.000Z</published>
-    <updated>2019-11-14T13:01:47.148Z</updated>
+    <updated>2019-11-27T11:45:13.567Z</updated>
     
     <content type="html"><![CDATA[<h2 id="单源最大流"><a href="#单源最大流" class="headerlink" title="单源最大流"></a>单源最大流</h2><pre><code class="bash">// EK(Edmond-Karp) : 利用bfs实现，时间复杂度O（V*E^2）<span class="comment">#include &lt;cstdio&gt;</span><span class="comment">#include &lt;iostream&gt;</span><span class="comment">#include &lt;queue&gt;</span><span class="comment">#include &lt;cstring&gt;</span><span class="comment">#include &lt;cctype&gt;</span><span class="comment">#include &lt;algorithm&gt;</span><span class="comment">#define rg register</span>const int maxn = 1e5 + 7;const int inf = 2147483647;using namespace std;namespace _lgl{    int n, m, s, t, tot, head[maxn];     bool vis[maxn];    struct edge{        int to, val, next;    }e[maxn &lt;&lt; 1];    struct Pre{        int point, edge;    }pre[maxn];    inline void add(int x,int y,int z){        e[++tot].to = y;        e[tot].next = head[x];        e[tot].val  = z;        head[x] = tot;    }    inline int <span class="function"><span class="title">rd</span></span>(){        int f = 1, s = 0; char c = getchar();        <span class="keyword">for</span>(;!isdigit(c);c = getchar()) <span class="keyword">if</span>(c == <span class="string">'-'</span>) f = -1;        <span class="keyword">for</span>(; isdigit(c);c = getchar()) s = (s &lt;&lt; 3) + (s &lt;&lt; 1) + c - <span class="string">'0'</span>;        <span class="built_in">return</span> f * s;    }    inline bool <span class="function"><span class="title">bfs</span></span>(){        queue &lt;int&gt; q;         memset(vis, 0, sizeof(vis));        memset(pre,-1, sizeof(pre));        vis[s] = <span class="literal">true</span>; q.push(s);        <span class="keyword">while</span>(!q.empty()){            int now = q.front(); q.pop();            <span class="keyword">for</span>(int i = head[now]; i; i = e[i].next){                int to = e[i].to;                <span class="keyword">if</span>(!vis[to] &amp;&amp; e[i].val){                    pre[to].point = now;                    pre[to].edge  = i;                    <span class="keyword">if</span>(to == t) <span class="built_in">return</span> <span class="literal">true</span>;                    vis[to] = 1;                    q.push(to);                }            }        }    }    inline int <span class="function"><span class="title">EK</span></span>(){        int ans = 0;        <span class="keyword">while</span>(bfs()){            int mi = inf;            <span class="keyword">for</span>(int i = t; i != s; i = pre[i].point) mi = mi &lt; e[pre[i].edge].val ? mi : e[pre[i].edge].val;            <span class="keyword">for</span>(int i = t; i != s; i = pre[i].point){                e[pre[i].edge].val -= mi;                e[pre[i].edge^1].val += mi;            }            ans += mi;        }        <span class="built_in">return</span> ans;    }    inline void <span class="function"><span class="title">main</span></span>(){        n = rd(), m = rd(), s = rd(), t = rd();        <span class="keyword">for</span>(int x, y, z, i = 1; i &lt;= m; i++)            x = rd(), y = rd(), z = rd(), add(x,y,z), add(y,x,0);        <span class="built_in">printf</span>(<span class="string">"%d"</span>,EK());        <span class="built_in">return</span>;    }}int <span class="function"><span class="title">main</span></span>(){    _lgl::main();    <span class="built_in">return</span> 0;}</code></pre>]]></content>
     
@@ -148,7 +224,7 @@
     <link href="https://cmu-ruoyan-lgl.github.io/2019/11/07/hello-world/"/>
     <id>https://cmu-ruoyan-lgl.github.io/2019/11/07/hello-world/</id>
     <published>2019-11-07T12:32:33.427Z</published>
-    <updated>2019-11-13T10:49:32.147Z</updated>
+    <updated>2019-11-27T11:45:14.819Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
