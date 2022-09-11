@@ -29,6 +29,8 @@
 <p>排序算法（结构体，vector）</p>
 <p>哈希</p>
 <p>组合数</p>
+<p>逆元</p>
+<p>中国剩余定理</p>
 <p>2、图论</p>
 <p>并查集</p>
 <p>线性筛</p>
@@ -37,6 +39,11 @@
 <p>st（）</p>
 <p>线段树</p>
 <p>树状数组</p>
+<p>二分图最大匹配</p>
+<p>3、玄学</p>
+<p>rand_shuffle</p>
+<p>rand(time(null))</p>
+<p>卡时</p>
 ]]></content>
       <categories>
         <category>Algorithm</category>
