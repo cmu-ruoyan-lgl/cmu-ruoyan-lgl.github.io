@@ -3,7 +3,7 @@
   <entry>
     <title>Kill for life</title>
     <url>/2022/08/31/Kill-for-life/</url>
-    <content><![CDATA[<p>演示链接：<a href="https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8">https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8</a><br>项目链接：<a href="https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw">https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw</a><br>提取码：cqfq </p>
+    <content><![CDATA[<p>演示链接：<br><a href="https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8">https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8</a><br>项目链接：<a href="https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw">https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw</a><br>提取码：cqfq </p>
 ]]></content>
       <categories>
         <category>demo</category>
@@ -11,6 +11,11 @@
       <tags>
         <tag>Unreal Engine</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Google_view</title>
+    <url>/2022/09/13/Google-view/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>博乐科技实习回顾</title>
@@ -276,5 +281,9 @@
       <categories>
         <category>Algorithm</category>
       </categories>
+      <tags>
+        <tag>网络流</tag>
+        <tag>最大流</tag>
+      </tags>
   </entry>
 </search>
