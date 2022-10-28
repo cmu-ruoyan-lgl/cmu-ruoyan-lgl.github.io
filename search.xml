@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2020 新的开始</title>
-    <url>/2020/01/16/2020-%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
-    <content><![CDATA[<p>也不知道2019年里我改变了多少，依然那么单纯，幻想，焦虑，抑郁，仍然不知道自己现在能不能接受自己，一无是处，一事无成，那有如何呢，都过去了呢，也回不去了呢。</p>
-<p>想过2019年曾自己立了无数个flag，现在又实现了几个，对未来还是好迷茫，感受不到光。</p>
-<p>人生下来有什么意义呢，活着，死去。时间冲刷后又留下了什么，死后又去了哪里？</p>
-<span id="more"></span>
-
-<p>最近一直在做噩梦，梦见自己死去，也不知道自己到底梦见了多少回，等我慢慢地由恐惧变成了适应，我也逐渐开始麻木，这样的梦也消失了</p>
-<p>我常常幻想着自己的未来，我的未来是怎样的呢，看着网上的大亨衣食无忧游戏人间，我却只能看到自己未来忙于生计养活自己，我还是没有遇见我心仪的人，一个人潦草度日</p>
-<p>我一直不是一个贫困的人，我愧为人</p>
-<p>不想平庸，却无能为力</p>
-<p>发了那么多牢骚还是带面对现实，唉，晚安世界，或许</p>
-<p>永别世界</p>
-<p>今天早上又起的很晚，制定好的英语计划没有开始就已经结束，拖延症晚期，唉</p>
-<p>去医院做了做检查，中度抑郁，开了半年来士普和百适可，希望能恢复吧</p>
-<p>心态崩了</p>
+    <title>Kill for life</title>
+    <url>/2022/08/31/Kill-for-life/</url>
+    <content><![CDATA[<p>演示链接：<br><a href="https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8">https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8</a><br>项目链接：<a href="https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw">https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw</a><br>提取码： cqfq </p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>demo</category>
       </categories>
+      <tags>
+        <tag>Unreal Engine</tag>
+      </tags>
   </entry>
   <entry>
-    <title>C++常用函数</title>
-    <url>/2022/09/03/C-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h3 id="lower-bound-arr-arr-arr-size-val"><a href="#lower-bound-arr-arr-arr-size-val" class="headerlink" title="lower_bound(arr, arr + arr.size(), val)"></a><strong>lower_bound(arr, arr + arr.size(), val)</strong></h3><p>返回一个迭代器，返回指向大于等于val的第一个值的位置</p>
-<p>lower_bound(arr,  arr + arr.size(), val) - arr </p>
-<p>可以得到大于等于val数值的数组下标</p>
-<p><em>&#x2F;&#x2F;升序队列，小顶堆</em> priority_queue &lt;int,vector<int>,greater<int> &gt; q; </int></int></p>
-<p><em>&#x2F;&#x2F;降序队列，大顶堆</em> priority_queue &lt;int,vector<int>,less<int> &gt;q;</int></int></p>
-<p>std::to_string(num) 将数字转换成string</p>
-<p>数组初始化</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> sum[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 只能初始化为0</span></span><br><span class="line"><span class="built_in">memset</span>(sum, <span class="number">0</span>, <span class="built_in">sizeof</span>(sum));</span><br><span class="line"><span class="comment">// 按字节赋值，通常用来赋值0或-1</span></span><br><span class="line"><span class="built_in">fill</span>(sum, sum + sum.<span class="built_in">size</span>(), <span class="number">0</span>); </span><br><span class="line"><span class="comment">// fill按单元赋值，将一个区间元素赋相同的值</span></span><br><span class="line"></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">nums</span><span class="params">(<span class="number">17</span>)</span></span>; </span><br><span class="line"><span class="comment">//初始化设置nums有17个元素，此时nums.push(123)从17个元素后面加</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">nums</span><span class="params">(<span class="number">17</span>, <span class="number">3</span>)</span></span>; </span><br><span class="line"><span class="comment">//初始化设置nums有17个值为3的元素</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">nums</span><span class="params">(sum)</span></span>;</span><br><span class="line"><span class="comment">// 将数组sum的元素复制到nums中</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">n2</span><span class="params">(nums.begin(), nums.end())</span></span>;</span><br><span class="line"><span class="comment">// 将动态数组nums的元素复制到n2中</span></span><br><span class="line"><span class="built_in">fill</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), <span class="number">3</span>)</span><br><span class="line"><span class="comment">// 将动态数组nums中元素值全设为3</span></span><br><span class="line">nums.<span class="built_in">insert</span>(nums.<span class="built_in">begin</span>() + i, k)</span><br><span class="line"><span class="comment">// 在动态数组nums的第i个元素前插入k</span></span><br><span class="line">nums.<span class="built_in">insert</span>(nums.<span class="built_in">begin</span>() + i, k, val)</span><br><span class="line"><span class="comment">// 在动态数组nums的第i个元素前插入k个值为val的元素</span></span><br><span class="line">nums.<span class="built_in">insert</span>(nums.<span class="built_in">end</span>(), val)</span><br><span class="line"><span class="comment">// 在动态数组nums末尾插入val</span></span><br><span class="line"><span class="built_in">reverse</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>())</span><br><span class="line"><span class="comment">// 反转动态数组</span></span><br></pre></td></tr></table></figure>
+    <title>accumulate函数解析</title>
+    <url>/2022/10/28/accumulate%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<h3 id="函数介绍"><a href="#函数介绍" class="headerlink" title="函数介绍"></a>函数介绍</h3><p>accumulate是<code>numeric</code>库中的一个函数，主要用来对指定范围内元素求和，但也自行指定一些其他操作，如范围内所有元素相乘、相除、自定义操作等。</p>
+<span id="more"></span>
 
-<p>accumulate()</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;numeric&gt;</span><span class="comment">//accumulate函数在这个库中定义</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span><span class="comment">//包含这个库，可以直接输出字符串</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span><span class="comment">//vector是向量类型，可容纳许多类型的数据，因此也被称为容器</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//功能一：求和</span></span><br><span class="line"> <span class="type">int</span> list[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> &#125;;</span><br><span class="line"> <span class="type">int</span> sum= <span class="built_in">accumulate</span>(list, list+<span class="number">10</span>, <span class="number">0</span>) ;</span><br><span class="line"> cout &lt;&lt;<span class="string">&quot;和：&quot;</span>&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line"> <span class="comment">//功能二：求连乘积</span></span><br><span class="line"> <span class="type">int</span>  con_product  = <span class="built_in">accumulate</span>(list, list + <span class="number">3</span>, <span class="number">1</span>, <span class="built_in">multiplies</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;连乘积：&quot;</span>&lt;&lt;con_product&lt;&lt;endl;</span><br><span class="line"> <span class="comment">//功能三：string合并</span></span><br><span class="line"> vector&lt;string&gt;a&#123;<span class="string">&quot;1&quot;</span>,<span class="string">&quot;-2345&quot;</span>,<span class="string">&quot;+6&quot;</span>&#125;;</span><br><span class="line"> string a_sum=<span class="built_in">accumulate</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(),<span class="built_in">string</span>(<span class="string">&quot;out: &quot;</span>));</span><br><span class="line">cout&lt;&lt;<span class="string">&quot;string合并后输出：&quot;</span>&lt;&lt;a_sum&lt;&lt;endl;</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用前导入头文件。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;numeric&gt;</span></span></span><br><span class="line"><span class="built_in">accumulate</span>(起始迭代器， 结束迭代器， 初始值[， 自定义操作函数])</span><br><span class="line"><span class="comment">// 第四个参数忽略则默认进行求和计算</span></span><br></pre></td></tr></table></figure>
 
-<p>求和时，accumulate带有三个形参：累加的元素起始地址；累加的元素结束地址，累加的初值（通常为0）。例如：<br>sum&#x3D; accumulate(list, list+10, 0) ;得出sum&#x3D;55.<br>如果sum&#x3D; accumulate(list, list+3, 0) ;得出sum&#x3D;6.<br>如果sum&#x3D; accumulate(list, list+3, 100) ;得出sum&#x3D;106.</p>
-<p>求连乘积时，accumulate带有四个形参：连乘的元素起始地址；连乘的元素结束地址，连乘的初值（通常为1）。例如：<br>con_product&#x3D; accumulate(list, list+3, 1, multiplies<int>()) ;得出sum&#x3D;6.<br>如果con_product&#x3D; accumulate(list, list+3, 10, multiplies<int>()) ;得出sum&#x3D;60.<br>求string合并，<br>string a_sum&#x3D;accumulate(a.begin(), a.end(),string(“out: “));得到out: 1-2345+6</int></int></p>
+<h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; arr&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line"><span class="type">int</span> sum = <span class="built_in">accumulate</span>(arr.<span class="built_in">begin</span>(), arr.<span class="built_in">end</span>(), <span class="number">0</span>); </span><br><span class="line">cout &lt;&lt; sum &lt;&lt; endl; <span class="comment">// 输出55</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="乘积"><a href="#乘积" class="headerlink" title="乘积"></a>乘积</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; arr&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line"><span class="type">int</span> sum = <span class="built_in">accumulate</span>(arr.<span class="built_in">begin</span>(), arr.<span class="built_in">end</span>(), <span class="number">1</span>, <span class="built_in">multiplies</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line">cout &lt;&lt; sum &lt;&lt; endl; <span class="comment">// 输出3628800</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 能进行拼接的原因是string类定义了+方法</span></span><br><span class="line">vector&lt;string&gt; words&#123;<span class="string">&quot;this &quot;</span>, <span class="string">&quot;is &quot;</span>, <span class="string">&quot;a &quot;</span>, <span class="string">&quot;sentence!&quot;</span>&#125;;</span><br><span class="line">string init, res;</span><br><span class="line">res = <span class="built_in">accumulate</span>(words.<span class="built_in">begin</span>(), words.<span class="built_in">end</span>(), init);    <span class="comment">// 连接字符串</span></span><br><span class="line">cout &lt;&lt; res &lt;&lt; endl;    <span class="comment">// this is a sentence!</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义操作1"><a href="#自定义操作1" class="headerlink" title="自定义操作1"></a>自定义操作1</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">(<span class="type">int</span> acc, <span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">3</span> * acc + <span class="number">13</span> * num + <span class="number">113</span>) % <span class="number">1634246007</span>; <span class="comment">// hash</span></span><br><span class="line">&#125;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; arr&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line"><span class="type">int</span> sum = <span class="built_in">accumulate</span>(arr.<span class="built_in">begin</span>(), arr.<span class="built_in">end</span>(), <span class="number">0</span>, func); </span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义操作2"><a href="#自定义操作2" class="headerlink" title="自定义操作2"></a>自定义操作2</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    string name;</span><br><span class="line">    <span class="type">int</span> score;</span><br><span class="line">    <span class="built_in">Student</span>() &#123;&#125;;  </span><br><span class="line">    <span class="built_in">Student</span>(string name, <span class="type">int</span> score) : <span class="built_in">name</span>(name), <span class="built_in">score</span>(score) &#123;&#125;; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun</span><span class="params">(<span class="type">int</span> acc, Student b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b.score;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vector&lt;Student&gt; arr;</span><br><span class="line">    arr.<span class="built_in">emplace_back</span>(<span class="string">&quot;Alice&quot;</span>, <span class="number">82</span>);</span><br><span class="line">    arr.<span class="built_in">emplace_back</span>(<span class="string">&quot;Bob&quot;</span>, <span class="number">91</span>);</span><br><span class="line">    arr.<span class="built_in">emplace_back</span>(<span class="string">&quot;Lucy&quot;</span>, <span class="number">85</span>);</span><br><span class="line">    arr.<span class="built_in">emplace_back</span>(<span class="string">&quot;Anna&quot;</span>, <span class="number">60</span>);</span><br><span class="line">    arr.<span class="built_in">emplace_back</span>(<span class="string">&quot;June&quot;</span>, <span class="number">73</span>);</span><br><span class="line">    <span class="type">int</span> avg_score = <span class="built_in">accumulate</span>(arr.<span class="built_in">begin</span>(), arr.<span class="built_in">end</span>(), <span class="number">0</span>, fun) / arr.<span class="built_in">size</span>();	<span class="comment">// 总分/学生数</span></span><br><span class="line">    cout &lt;&lt; avg_score &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Algorithm</category>
@@ -46,7 +38,135 @@
       <tags>
         <tag>note</tag>
         <tag>秋招复习</tag>
+        <tag>numeric</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>托福写作模板</title>
+    <url>/2022/09/30/%E6%89%98%E7%A6%8F%E5%86%99%E4%BD%9C%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>​	</p>
+<p>托福写作包括综合写作和独立写作两个部分：</p>
+<p>综合写作： 读 + 听 + 写  20min  150-225</p>
+<p>独立写作：讨论性话题 写 30min 480</p>
+<p>考试时间过长，做到最后的写作部分体乏心累，整理个模板供考试使用。</p>
+<span id="more"></span>
+
+<p>独立写作包括</p>
+<p>开头段：100</p>
+<p>两个论证段：170 + 170</p>
+<p>结尾段： 60</p>
+<h3 id="开头段模板"><a href="#开头段模板" class="headerlink" title="开头段模板"></a>开头段模板</h3><p>The issue regarding <strong>话题</strong>,in this day and age,has never failed to arouse the public concern and at the same time provoke a heated debate among individuals.</p>
+<p>Some are inclined to be strong believers in the extreme claim that <strong>反方观点</strong>.</p>
+<p>Perhaps sound and attractive as their argument seems,but it can hardly bear closer analysis.</p>
+<p>Accordingly,I,without hesitation,advocate that <strong>个人观点</strong> on account of the following evident reasons and examples.</p>
+<h4 id="开头段例-TPO-22-Agree-or-Disagree"><a href="#开头段例-TPO-22-Agree-or-Disagree" class="headerlink" title="开头段例. TPO 22 Agree or Disagree ?"></a><strong>开头段例. TPO 22 Agree or Disagree ?</strong></h4><p>Teachers should not make their social or political views known to students in the classroom.</p>
+<p>The issue regarding <strong>whether teachers should express their political views to students</strong>,in this day and age,has never failed to arouse the public concern and at the same time provoke a heated debate among individuals.</p>
+<p>Some are inclined to be strong believers in the extreme claim that <strong>teachers are not allow to make their social views known to their young students</strong>.</p>
+<p>Perhaps sound and attractive as their argument seems,but it can hardly bear closer analysis.</p>
+<p>Accordingly,I,without hesitation,advocate that <strong>the social view from teachers plays a crucial  role in the development of students</strong> on account of the following evident reasons and examples.</p>
+<h3 id="论述段模板"><a href="#论述段模板" class="headerlink" title="论述段模板"></a>论述段模板</h3><p>1主题句 + 2-4解释句 + 2-4例证句 + 1结论句</p>
+<p>On the one hand, <strong>主题句</strong>.To be more specific,<strong>解释句</strong>.This point can be better and further supported by the example from __.<strong>展开例证</strong>.Obviously,this example may inform us that <strong>结论句</strong>.</p>
+<p>On the other, <strong>主题句</strong>.Precisely,<strong>解释句</strong>.I can think of no better illustration for this point than the example from __.<strong>展开例证</strong>.Apparently,we can learn from the example that <strong>结论句</strong>.</p>
+<h4 id="主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因"><a href="#主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因" class="headerlink" title="主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因"></a>主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因</h4><h4 id="解释句：在主题句的原因和结果中间加入因果链"><a href="#解释句：在主题句的原因和结果中间加入因果链" class="headerlink" title="解释句：在主题句的原因和结果中间加入因果链"></a>解释句：在主题句的原因和结果中间加入因果链</h4><h5 id="逻辑链接词"><a href="#逻辑链接词" class="headerlink" title="逻辑链接词"></a>逻辑链接词</h5><p>连词：because, since, as, for, so</p>
+<p>链接短语： because of, due to, owing to, thanks to, as a result of, on account of </p>
+<p>副词：therefore, thus, hence, accordingly, consequently</p>
+<h5 id="三种句式结构"><a href="#三种句式结构" class="headerlink" title="三种句式结构"></a>三种句式结构</h5><p>非限制性定语从句：分词结构；so…that&#x2F;such…that结构</p>
+<p>The competition is severe, so we have to work hard.</p>
+<p>Because the competition is severe,we have to work hard.</p>
+<p>Due to the severe competition, we have to work hard.</p>
+<p>The competition is severe;therefore,we have to work hard.</p>
+<p>The competition is severe,which pushes us to work hard.</p>
+<p>The competition is severe,pushing us to work hard.</p>
+<p>The competition is so severe that we have to work hard.</p>
+<p><strong>eg.  主题句：Studying abroad can help us to cultivate our independence</strong></p>
+<p>解释句：<strong>To be more specific</strong>, <strong>due to</strong> studying abroad, we have to live in <strong>such a new environment</strong> that it is inevitable for us to be far away from our parents and friends, <strong>leading to</strong> the lack of the assistance from them; <strong>therefore</strong>,when we come across problems,we have to face and deal with them on our own, <strong>in the process of which</strong>,we are bound to master some relevant capabilities and accumulate much more experience,<strong>so</strong> our independence can be undoubtedly cultivated.</p>
+<h4 id="例证：编造数据-x2F-虚空朋友"><a href="#例证：编造数据-x2F-虚空朋友" class="headerlink" title="例证：编造数据&#x2F;虚空朋友"></a>例证：编造数据&#x2F;虚空朋友</h4><p>开头模板</p>
+<p>This point can be better and further supported by the example from <strong>事例</strong></p>
+<p>I can think of no better illustration for this point than the example from <strong>事例</strong></p>
+<p>虚假数据&#x2F;报告起手句式</p>
+<p>According to a recent survey carried out by a local newspaper agency&#x2F;CCTV after polling thousands of <strong><strong>群体</strong></strong>, <strong>_编造的数据&#x2F;统计结果</strong>_.</p>
+<p>eg. Eighty percent of parents said their children became more independent and responsible after studying abroad.</p>
+<h4 id="结论句：一句话总结"><a href="#结论句：一句话总结" class="headerlink" title="结论句：一句话总结"></a>结论句：一句话总结</h4><p>Obviously,this example may inform us that  __<strong>改写的主题句</strong> __.</p>
+<p>Apparently,we can learn from the example that  __<strong>改写的主题句</strong> __.</p>
+<h4 id="论证段例"><a href="#论证段例" class="headerlink" title="论证段例"></a>论证段例</h4><p>On the one hand, studying abroad can help us to cultivate our independence.</p>
+<p>To be more specific, due to studying abroad, we have to live in such a new environment that it is inevitable for us to be far away from our parents and friends, leading to the lack of the assistance from them; therefore,when we come across problems,we have to face and deal with them on our own, in the process of which,we are bound to master some relevant capabilities and accumulate much more experience,so our independence can be undoubtedly cultivated.</p>
+<p>This point can be better and further supported by the example from a report from CCTV. According to the recent survey carried out by CCTV after polling thousands of parents, eighty percent of parents said their children became more independent and responsible after studying abroad.</p>
+<p>Obviously, this example may inform us that independence can be cultivated by studying abroad.</p>
+<h3 id="结尾段模板"><a href="#结尾段模板" class="headerlink" title="结尾段模板"></a>结尾段模板</h3><p>Considering all the reasons and examples discussed above, we can safely come to the conclusion that _<strong>改写个人观点</strong> _,which should be definitely attributed to the two main points —— __<strong>A and B (两个语法结构相同的名词短语，用来概括两个论证段主题句)</strong> __.</p>
+]]></content>
+      <categories>
+        <category>TOEFL</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+        <tag>English</tag>
+        <tag>TOEFL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022Google开发者大会游记</title>
+    <url>/2022/09/13/Google-view/</url>
+    <content><![CDATA[<p>去上海参加2022Google开发者大会咯！</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223725.jpg" alt="QQ图片20220917223725"></p>
+<span id="more"></span>
+
+<h3 id="Day-0"><a href="#Day-0" class="headerlink" title="Day-0"></a>Day-0</h3><p>​	在小区门口喝了碗豆腐脑，回家洗了个澡就去赶高铁了，从山东坐了四个多小时的高铁终于到了上海。上海这边疫情检查好严要求72小时核酸，一出站先搞了上海的随申码，做完核酸就坐地铁去酒店了，在酒店点了伴猪脸(超级好吃)，刷了刷leetcode，简单安排了明天行程就休息了，期待明天的开发者大会。</p>
+<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day-1"></a>Day-1</h3><p>​	因为要赶今天的8：30的开发者大会，今天起床异常的早，大概7：30就起了，迷迷瞪瞪的好困，到了之后才发现原来9点到也不会有影响，后悔没有多睡会。。。</p>
+<p>​	到场后先在Google的签到处签到打卡，领取在开发者大会的收集任务卡，任务卡包括了包括深度学习、人工智能、Google map、Google Cloud、Google play等一些谷歌自家近年突破的技术展示，收集完领了一堆奖。</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223802.jpg">	</p>
+<p>​	在领签到收集的地方认识了在B站做游戏引擎的大佬刘孙瑞和快手的大佬赵富强，同为开发者大家有很多的共同语言，在技术、发展和大会热点上聊了很多，受益匪浅。吃饭的时候和B站的大佬和大佬同事讨论了秋招和润学，结论：国内互联网寒冬还卷，早润！</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223805.jpg" alt="QQ图片20220917223805"></p>
+<p>​	上午的重点活动还是去听谷歌开发者大会的主题演讲，大会的PPT特效真的非常酷炫，而且其中细节的是PPT的每一次动效和镜头切换似乎都对心理学做了研究，每一次都把握的恰到好处，近两个小时的演讲全程全身心的投入进去，真的是一件Amazing的体验。</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223819.jpg" alt="QQ图片20220917223819"></p>
+<p>​	中午去五楼的展厅吃饭，来之前还对谷歌餐厅有所期待，是我想多了，是巨难吃的盒饭。饭后就去谷歌的展厅玩了，活动卡里面有12个展厅和6个彩蛋收集，按照自己乐趣随便逛逛就收集完了，里面深度学习用乐器模拟人声音和根据人的动作奏乐的模块是我最喜欢的，Flutter3.3由于多平台一体化的特性是我最看好的一个项目，未来一定能得到大范围的推广。大会展厅奖励和菜单收集给的礼品非常多，有趣的是居然在空当接龙那边rank1了，后来实在不好意思再耽搁后面人时间就草草结束了哈哈。</p>
+<p>​	两个Ai做画：</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223739.png" alt="QQ图片20220917223739"></p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223733.png" alt="QQ图片20220917223733"></p>
+<h4 id="谈谈感受"><a href="#谈谈感受" class="headerlink" title="谈谈感受"></a>谈谈感受</h4><p>​	这次谷歌开发者大会我感受最深的是开发者们的使命感：code for future、code for better、code for everyone。谷歌提供了很好的开源社区和技术支持，帮助更多的人成为开发者，感受代码之美，去帮助世界变得更好。</p>
+<p>​	其次，是谷歌多元、平等和共融的公司文化，当我看到谷歌客户经理chen是一位坐着轮椅的残疾人，他在加入Google的时候并没有因为身体上的障碍导致他失去工作的机会，而是以恰当的方式保障了他的自尊和权利，在Google的11年不断升职成为客户经理。看着这位残疾人去尝试跑马拉松、去滑雪、去坐着轮椅在台上演讲，更能体会他对抗命运的不屈灵魂和Google多元平等共融的公司文化。Google在对女性开发者和残障人士的帮助上做了很多的贡献，开设了Women Developers和残障联盟 (Disability Alliance) ,旨在帮助女性开发者更好的技术支持和工作体验和帮助社会上的残障人士获得更清晰的职业发展规划,促进更融合的工作环境。</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223630.jpg" alt="QQ图片20220917223630"></p>
+<p>​	在Google的展厅最后是招贤纳士的环节，我有幸和一位Google的项目经理面对面会谈，她对我的态度十分亲和，没有因为我只是一位双非学校的学生而有任何轻视和失望的态度：在Google，你面试的结果只和你的能力有关。在谈话间了解到，Google会在“谷歌招聘包打听”的公众号上发表招贤纳士的信息，社招和校招最后进去的level和package是一样的，面试难度也相同，Google对Android开发者的需求较多，也更希望面试者有很好的英语水平。Google软件工程师的package给的很高，每周工作5天，其中在家工作两天，在公司工作三天，年假很多，福利很爽，希望有机会能进入谷歌工作。</p>
+<h4 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h4><p>​	除了来参观学习，没想到谷歌还给了这么多礼品，感觉跟来进货一样哈哈。</p>
+<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223747.jpg" alt="QQ图片20220917223747"></p>
+]]></content>
+      <categories>
+        <category>Technical meeting</category>
+      </categories>
+      <tags>
+        <tag>Google</tag>
+        <tag>travel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博乐科技实习回顾</title>
+    <url>/2022/09/12/%E5%8D%9A%E4%B9%90%E7%A7%91%E6%8A%80%E5%AE%9E%E4%B9%A0%E5%9B%9E%E9%A1%BE/</url>
+    <content><![CDATA[<p>2022年5月25日，通过2022年春招进入博乐科技实习；</p>
+<p>2022年9月9日，办理了离职手续，并记录下了在博乐科技的实习经历。</p>
+<span id="more"></span>
+
+<h3 id="工作日常"><a href="#工作日常" class="headerlink" title="工作日常"></a>工作日常</h3><p>​	   实习岗位是Cocos2d客户端开发，每天的工作就是在idea上写lua文件维护Jackpot World的前端并开发新的活动，工作轻松但时有波折，前期经常因为对项目不熟悉和对单例模型没有接触过碰了不少壁，每次都只能去问前端组的大佬左哥和宏哥，也被迫加了不少班。当然总体上工作任务很轻松，熟悉后就很少加班了，只是每周二周四上线的时候必须要等测试测完才能走，真的很煎熬，尤其是对我这种下班时间到在公司多呆1分钟就要死的这种人。</p>
+<p>​		可惜的是，原本选择这个实习以为自己会对cocos引擎了解多一些，对使用lua写脚本的学习更实用系统，但是工作的技术栈实在不深，自我的价值认同感不强，感觉在博乐技术上的长进不多。</p>
+<h3 id="公司感受"><a href="#公司感受" class="headerlink" title="公司感受"></a>公司感受</h3><p>​		博乐科技的公司氛围、工作环境、卫生间环境、员工待遇和管理架构上做的真的不错，公司氛围是比较轻松的，推荐员工主动自驱，在做完工作后有自己学习的习惯；工作环境就是大平层工位，会配有空气清新设备，工位给的空间还是很大的，美中不足的是隐秘性做的很差，没有像微软那样的隔板保护员工隐私；卫生间环境做真的很nice，有阿姨经常打扫处理，没有异味而且会喷香水，洗手台上有洗手液和消毒液，洗完手还有纸擦手，感觉这点真的很舒服；正式员工薪资是给的比较高的，实习生的工资就不太行了，尤其是老子一个开发的实习工资和tm运营啥的一样就nmd离谱，福利也很好，有免费的零食和饮料茶水自取，中午晚上的餐是免费的，每年有两次团建、过节会有活动：中秋蹭了自助、公司发的阳澄湖大闸蟹和月饼：管理架构上是扁平式的，员工间关系比较融洽。</p>
+<h3 id="北漂租房"><a href="#北漂租房" class="headerlink" title="北漂租房"></a>北漂租房</h3><p>​	北漂租房是真的贵啊，用的自如，每个月租金3000多还要额外给平台10%的服务费，这服务费就是喂狗了，租了2个半月没有一点服务。租的地方倒是离公司很近，走路14分钟就到了，每天路程半个小时，倒也舒服。</p>
+<h3 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h3><ol>
+<li>价值观不和，公司的口号是做全球最以玩家为中心的公司，但是实际上却算计玩家算计的很透彻。一次跟后端聊天说他入职的时候做了个美人鱼的集卡活动，数值给了9个配置，玩家是无论如何都不能做到收集所有的卡，他连领奖的函数都没写，我就感觉这是个骗钱公司，打着以玩家为中心的幌子罢了。</li>
+<li>准备留学的事情</li>
+<li>参加秋招和Google开发者大会</li>
+<li>腿半月板损伤要做手术</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Work</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+        <tag>秋招复习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>背包九讲回顾</title>
+    <url>/2022/09/10/%E8%83%8C%E5%8C%85%E4%B9%9D%E8%AE%B2%E5%9B%9E%E9%A1%BE/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>C++常用算法</title>
@@ -85,86 +205,25 @@
       </tags>
   </entry>
   <entry>
-    <title>EK - Edmond-Karp</title>
-    <url>/2019/11/13/EK-Edmond-Karp/</url>
-    <content><![CDATA[<h1 id="EK-Edmond-Karp"><a href="#EK-Edmond-Karp" class="headerlink" title="EK - Edmond-Karp"></a>EK - Edmond-Karp</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// EK(Edmond-Karp) : 利用bfs实现，时间复杂度O（V*E^2）</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rg register</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> _lgl&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n, m, s, t, tot, head[maxn]; </span><br><span class="line">    <span class="type">bool</span> vis[maxn];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">edge</span>&#123;</span><br><span class="line">        <span class="type">int</span> to, val, next;</span><br><span class="line">    &#125;e[maxn &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Pre</span>&#123;</span><br><span class="line">        <span class="type">int</span> point, edge;</span><br><span class="line">    &#125;pre[maxn];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> z)</span></span>&#123;</span><br><span class="line">        e[++tot].to = y;</span><br><span class="line">        e[tot].next = head[x];</span><br><span class="line">        e[tot].val  = z;</span><br><span class="line">        head[x] = tot;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">rd</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="type">int</span> f = <span class="number">1</span>, s = <span class="number">0</span>; <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">        <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c = <span class="built_in">getchar</span>()) <span class="keyword">if</span>(c == <span class="string">&#x27;-&#x27;</span>) f = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(; <span class="built_in">isdigit</span>(c);c = <span class="built_in">getchar</span>()) s = (s &lt;&lt; <span class="number">3</span>) + (s &lt;&lt; <span class="number">1</span>) + c - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span> f * s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</span><br><span class="line">        queue &lt;<span class="type">int</span>&gt; q; </span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">        <span class="built_in">memset</span>(pre,<span class="number">-1</span>, <span class="built_in">sizeof</span>(pre));</span><br><span class="line">        vis[s] = <span class="literal">true</span>; q.<span class="built_in">push</span>(s);</span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            <span class="type">int</span> now = q.<span class="built_in">front</span>(); q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = head[now]; i; i = e[i].next)&#123;</span><br><span class="line">                <span class="type">int</span> to = e[i].to;</span><br><span class="line">                <span class="keyword">if</span>(!vis[to] &amp;&amp; e[i].val)&#123;</span><br><span class="line">                    pre[to].point = now;</span><br><span class="line">                    pre[to].edge  = i;</span><br><span class="line">                    <span class="keyword">if</span>(to == t) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                    vis[to] = <span class="number">1</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(to);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">EK</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">bfs</span>())&#123;</span><br><span class="line">            <span class="type">int</span> mi = inf;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = t; i != s; i = pre[i].point) mi = mi &lt; e[pre[i].edge].val ? mi : e[pre[i].edge].val;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = t; i != s; i = pre[i].point)&#123;</span><br><span class="line">                e[pre[i].edge].val -= mi;</span><br><span class="line">                e[pre[i].edge^<span class="number">1</span>].val += mi;</span><br><span class="line">            &#125;</span><br><span class="line">            ans += mi;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        n = <span class="built_in">rd</span>(), m = <span class="built_in">rd</span>(), s = <span class="built_in">rd</span>(), t = <span class="built_in">rd</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> x, y, z, i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">            x = <span class="built_in">rd</span>(), y = <span class="built_in">rd</span>(), z = <span class="built_in">rd</span>(), <span class="built_in">add</span>(x,y,z), <span class="built_in">add</span>(y,x,<span class="number">0</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,<span class="built_in">EK</span>());</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    _lgl::<span class="built_in">main</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>C++常用函数</title>
+    <url>/2022/09/03/C-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h3 id="lower-bound-arr-arr-arr-size-val"><a href="#lower-bound-arr-arr-arr-size-val" class="headerlink" title="lower_bound(arr, arr + arr.size(), val)"></a><strong>lower_bound(arr, arr + arr.size(), val)</strong></h3><p>返回一个迭代器，返回指向大于等于val的第一个值的位置</p>
+<p>lower_bound(arr,  arr + arr.size(), val) - arr </p>
+<p>可以得到大于等于val数值的数组下标</p>
+<p><em>&#x2F;&#x2F;升序队列，小顶堆</em> priority_queue &lt;int,vector<int>,greater<int> &gt; q; </int></int></p>
+<p><em>&#x2F;&#x2F;降序队列，大顶堆</em> priority_queue &lt;int,vector<int>,less<int> &gt;q;</int></int></p>
+<p>std::to_string(num) 将数字转换成string</p>
+<p>数组初始化</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> sum[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 只能初始化为0</span></span><br><span class="line"><span class="built_in">memset</span>(sum, <span class="number">0</span>, <span class="built_in">sizeof</span>(sum));</span><br><span class="line"><span class="comment">// 按字节赋值，通常用来赋值0或-1</span></span><br><span class="line"><span class="built_in">fill</span>(sum, sum + sum.<span class="built_in">size</span>(), <span class="number">0</span>); </span><br><span class="line"><span class="comment">// fill按单元赋值，将一个区间元素赋相同的值</span></span><br><span class="line"></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">nums</span><span class="params">(<span class="number">17</span>)</span></span>; </span><br><span class="line"><span class="comment">//初始化设置nums有17个元素，此时nums.push(123)从17个元素后面加</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">nums</span><span class="params">(<span class="number">17</span>, <span class="number">3</span>)</span></span>; </span><br><span class="line"><span class="comment">//初始化设置nums有17个值为3的元素</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">nums</span><span class="params">(sum)</span></span>;</span><br><span class="line"><span class="comment">// 将数组sum的元素复制到nums中</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">n2</span><span class="params">(nums.begin(), nums.end())</span></span>;</span><br><span class="line"><span class="comment">// 将动态数组nums的元素复制到n2中</span></span><br><span class="line"><span class="built_in">fill</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), <span class="number">3</span>)</span><br><span class="line"><span class="comment">// 将动态数组nums中元素值全设为3</span></span><br><span class="line">nums.<span class="built_in">insert</span>(nums.<span class="built_in">begin</span>() + i, k)</span><br><span class="line"><span class="comment">// 在动态数组nums的第i个元素前插入k</span></span><br><span class="line">nums.<span class="built_in">insert</span>(nums.<span class="built_in">begin</span>() + i, k, val)</span><br><span class="line"><span class="comment">// 在动态数组nums的第i个元素前插入k个值为val的元素</span></span><br><span class="line">nums.<span class="built_in">insert</span>(nums.<span class="built_in">end</span>(), val)</span><br><span class="line"><span class="comment">// 在动态数组nums末尾插入val</span></span><br><span class="line"><span class="built_in">reverse</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>())</span><br><span class="line"><span class="comment">// 反转动态数组</span></span><br></pre></td></tr></table></figure>
 
+<p>accumulate()</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;numeric&gt;</span><span class="comment">//accumulate函数在这个库中定义</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span><span class="comment">//包含这个库，可以直接输出字符串</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span><span class="comment">//vector是向量类型，可容纳许多类型的数据，因此也被称为容器</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//功能一：求和</span></span><br><span class="line"> <span class="type">int</span> list[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> &#125;;</span><br><span class="line"> <span class="type">int</span> sum= <span class="built_in">accumulate</span>(list, list+<span class="number">10</span>, <span class="number">0</span>) ;</span><br><span class="line"> cout &lt;&lt;<span class="string">&quot;和：&quot;</span>&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line"> <span class="comment">//功能二：求连乘积</span></span><br><span class="line"> <span class="type">int</span>  con_product  = <span class="built_in">accumulate</span>(list, list + <span class="number">3</span>, <span class="number">1</span>, <span class="built_in">multiplies</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;连乘积：&quot;</span>&lt;&lt;con_product&lt;&lt;endl;</span><br><span class="line"> <span class="comment">//功能三：string合并</span></span><br><span class="line"> vector&lt;string&gt;a&#123;<span class="string">&quot;1&quot;</span>,<span class="string">&quot;-2345&quot;</span>,<span class="string">&quot;+6&quot;</span>&#125;;</span><br><span class="line"> string a_sum=<span class="built_in">accumulate</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(),<span class="built_in">string</span>(<span class="string">&quot;out: &quot;</span>));</span><br><span class="line">cout&lt;&lt;<span class="string">&quot;string合并后输出：&quot;</span>&lt;&lt;a_sum&lt;&lt;endl;</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>求和时，accumulate带有三个形参：累加的元素起始地址；累加的元素结束地址，累加的初值（通常为0）。例如：<br>sum&#x3D; accumulate(list, list+10, 0) ;得出sum&#x3D;55.<br>如果sum&#x3D; accumulate(list, list+3, 0) ;得出sum&#x3D;6.<br>如果sum&#x3D; accumulate(list, list+3, 100) ;得出sum&#x3D;106.</p>
+<p>求连乘积时，accumulate带有四个形参：连乘的元素起始地址；连乘的元素结束地址，连乘的初值（通常为1）。例如：<br>con_product&#x3D; accumulate(list, list+3, 1, multiplies<int>()) ;得出sum&#x3D;6.<br>如果con_product&#x3D; accumulate(list, list+3, 10, multiplies<int>()) ;得出sum&#x3D;60.<br>求string合并，<br>string a_sum&#x3D;accumulate(a.begin(), a.end(),string(“out: “));得到out: 1-2345+6</int></int></p>
 ]]></content>
       <categories>
         <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>网络流</tag>
-        <tag>最大流</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2022Google开发者大会游记</title>
-    <url>/2022/09/13/Google-view/</url>
-    <content><![CDATA[<p>去上海参加2022Google开发者大会咯！</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223725.jpg" alt="QQ图片20220917223725"></p>
-<span id="more"></span>
-
-<h3 id="Day-0"><a href="#Day-0" class="headerlink" title="Day-0"></a>Day-0</h3><p>​	在小区门口喝了碗豆腐脑，回家洗了个澡就去赶高铁了，从山东坐了四个多小时的高铁终于到了上海。上海这边疫情检查好严要求72小时核酸，一出站先搞了上海的随申码，做完核酸就坐地铁去酒店了，在酒店点了伴猪脸(超级好吃)，刷了刷leetcode，简单安排了明天行程就休息了，期待明天的开发者大会。</p>
-<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day-1"></a>Day-1</h3><p>​	因为要赶今天的8：30的开发者大会，今天起床异常的早，大概7：30就起了，迷迷瞪瞪的好困，到了之后才发现原来9点到也不会有影响，后悔没有多睡会。。。</p>
-<p>​	到场后先在Google的签到处签到打卡，领取在开发者大会的收集任务卡，任务卡包括了包括深度学习、人工智能、Google map、Google Cloud、Google play等一些谷歌自家近年突破的技术展示，收集完领了一堆奖。</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223802.jpg">	</p>
-<p>​	在领签到收集的地方认识了在B站做游戏引擎的大佬刘孙瑞和快手的大佬赵富强，同为开发者大家有很多的共同语言，在技术、发展和大会热点上聊了很多，受益匪浅。吃饭的时候和B站的大佬和大佬同事讨论了秋招和润学，结论：国内互联网寒冬还卷，早润！</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223805.jpg" alt="QQ图片20220917223805"></p>
-<p>​	上午的重点活动还是去听谷歌开发者大会的主题演讲，大会的PPT特效真的非常酷炫，而且其中细节的是PPT的每一次动效和镜头切换似乎都对心理学做了研究，每一次都把握的恰到好处，近两个小时的演讲全程全身心的投入进去，真的是一件Amazing的体验。</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223819.jpg" alt="QQ图片20220917223819"></p>
-<p>​	中午去五楼的展厅吃饭，来之前还对谷歌餐厅有所期待，是我想多了，是巨难吃的盒饭。饭后就去谷歌的展厅玩了，活动卡里面有12个展厅和6个彩蛋收集，按照自己乐趣随便逛逛就收集完了，里面深度学习用乐器模拟人声音和根据人的动作奏乐的模块是我最喜欢的，Flutter3.3由于多平台一体化的特性是我最看好的一个项目，未来一定能得到大范围的推广。大会展厅奖励和菜单收集给的礼品非常多，有趣的是居然在空当接龙那边rank1了，后来实在不好意思再耽搁后面人时间就草草结束了哈哈。</p>
-<p>​	两个Ai做画：</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223739.png" alt="QQ图片20220917223739"></p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223733.png" alt="QQ图片20220917223733"></p>
-<h4 id="谈谈感受"><a href="#谈谈感受" class="headerlink" title="谈谈感受"></a>谈谈感受</h4><p>​	这次谷歌开发者大会我感受最深的是开发者们的使命感：code for future、code for better、code for everyone。谷歌提供了很好的开源社区和技术支持，帮助更多的人成为开发者，感受代码之美，去帮助世界变得更好。</p>
-<p>​	其次，是谷歌多元、平等和共融的公司文化，当我看到谷歌客户经理chen是一位坐着轮椅的残疾人，他在加入Google的时候并没有因为身体上的障碍导致他失去工作的机会，而是以恰当的方式保障了他的自尊和权利，在Google的11年不断升职成为客户经理。看着这位残疾人去尝试跑马拉松、去滑雪、去坐着轮椅在台上演讲，更能体会他对抗命运的不屈灵魂和Google多元平等共融的公司文化。Google在对女性开发者和残障人士的帮助上做了很多的贡献，开设了Women Developers和残障联盟 (Disability Alliance) ,旨在帮助女性开发者更好的技术支持和工作体验和帮助社会上的残障人士获得更清晰的职业发展规划,促进更融合的工作环境。</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223630.jpg" alt="QQ图片20220917223630"></p>
-<p>​	在Google的展厅最后是招贤纳士的环节，我有幸和一位Google的项目经理面对面会谈，她对我的态度十分亲和，没有因为我只是一位双非学校的学生而有任何轻视和失望的态度：在Google，你面试的结果只和你的能力有关。在谈话间了解到，Google会在“谷歌招聘包打听”的公众号上发表招贤纳士的信息，社招和校招最后进去的level和package是一样的，面试难度也相同，Google对Android开发者的需求较多，也更希望面试者有很好的英语水平。Google软件工程师的package给的很高，每周工作5天，其中在家工作两天，在公司工作三天，年假很多，福利很爽，希望有机会能进入谷歌工作。</p>
-<h4 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h4><p>​	除了来参观学习，没想到谷歌还给了这么多礼品，感觉跟来进货一样哈哈。</p>
-<p><img src="/2022/09/13/Google-view/QQ%E5%9B%BE%E7%89%8720220917223747.jpg" alt="QQ图片20220917223747"></p>
-]]></content>
-      <categories>
-        <category>Technical meeting</category>
-      </categories>
-      <tags>
-        <tag>Google</tag>
-        <tag>travel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kill for life</title>
-    <url>/2022/08/31/Kill-for-life/</url>
-    <content><![CDATA[<p>演示链接：<br><a href="https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8">https://www.bilibili.com/video/BV1WV4y1u7Nf/?vd_source=5e7331f28afe4ab47831db6b1fe009e8</a><br>项目链接：<a href="https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw">https://pan.baidu.com/s/1mzgb7vcdpKuqVgwNLqJsiw</a><br>提取码： cqfq </p>
-]]></content>
-      <categories>
-        <category>demo</category>
-      </categories>
-      <tags>
-        <tag>Unreal Engine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博乐科技实习回顾</title>
-    <url>/2022/09/12/%E5%8D%9A%E4%B9%90%E7%A7%91%E6%8A%80%E5%AE%9E%E4%B9%A0%E5%9B%9E%E9%A1%BE/</url>
-    <content><![CDATA[<p>2022年5月25日，通过2022年春招进入博乐科技实习；</p>
-<p>2022年9月9日，办理了离职手续，并记录下了在博乐科技的实习经历。</p>
-<span id="more"></span>
-
-<h3 id="工作日常"><a href="#工作日常" class="headerlink" title="工作日常"></a>工作日常</h3><p>​	   实习岗位是Cocos2d客户端开发，每天的工作就是在idea上写lua文件维护Jackpot World的前端并开发新的活动，工作轻松但时有波折，前期经常因为对项目不熟悉和对单例模型没有接触过碰了不少壁，每次都只能去问前端组的大佬左哥和宏哥，也被迫加了不少班。当然总体上工作任务很轻松，熟悉后就很少加班了，只是每周二周四上线的时候必须要等测试测完才能走，真的很煎熬，尤其是对我这种下班时间到在公司多呆1分钟就要死的这种人。</p>
-<p>​		可惜的是，原本选择这个实习以为自己会对cocos引擎了解多一些，对使用lua写脚本的学习更实用系统，但是工作的技术栈实在不深，自我的价值认同感不强，感觉在博乐技术上的长进不多。</p>
-<h3 id="公司感受"><a href="#公司感受" class="headerlink" title="公司感受"></a>公司感受</h3><p>​		博乐科技的公司氛围、工作环境、卫生间环境、员工待遇和管理架构上做的真的不错，公司氛围是比较轻松的，推荐员工主动自驱，在做完工作后有自己学习的习惯；工作环境就是大平层工位，会配有空气清新设备，工位给的空间还是很大的，美中不足的是隐秘性做的很差，没有像微软那样的隔板保护员工隐私；卫生间环境做真的很nice，有阿姨经常打扫处理，没有异味而且会喷香水，洗手台上有洗手液和消毒液，洗完手还有纸擦手，感觉这点真的很舒服；正式员工薪资是给的比较高的，实习生的工资就不太行了，尤其是老子一个开发的实习工资和tm运营啥的一样就nmd离谱，福利也很好，有免费的零食和饮料茶水自取，中午晚上的餐是免费的，每年有两次团建、过节会有活动：中秋蹭了自助、公司发的阳澄湖大闸蟹和月饼：管理架构上是扁平式的，员工间关系比较融洽。</p>
-<h3 id="北漂租房"><a href="#北漂租房" class="headerlink" title="北漂租房"></a>北漂租房</h3><p>​	北漂租房是真的贵啊，用的自如，每个月租金3000多还要额外给平台10%的服务费，这服务费就是喂狗了，租了2个半月没有一点服务。租的地方倒是离公司很近，走路14分钟就到了，每天路程半个小时，倒也舒服。</p>
-<h3 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h3><ol>
-<li>价值观不和，公司的口号是做全球最以玩家为中心的公司，但是实际上却算计玩家算计的很透彻。一次跟后端聊天说他入职的时候做了个美人鱼的集卡活动，数值给了9个配置，玩家是无论如何都不能做到收集所有的卡，他连领奖的函数都没写，我就感觉这是个骗钱公司，打着以玩家为中心的幌子罢了。</li>
-<li>准备留学的事情</li>
-<li>参加秋招和Google开发者大会</li>
-<li>腿半月板损伤要做手术</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Work</category>
       </categories>
       <tags>
         <tag>note</tag>
@@ -234,103 +293,26 @@
       </tags>
   </entry>
   <entry>
-    <title>托福写作模板</title>
-    <url>/2022/09/30/%E6%89%98%E7%A6%8F%E5%86%99%E4%BD%9C%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>​	</p>
-<p>托福写作包括综合写作和独立写作两个部分：</p>
-<p>综合写作： 读 + 听 + 写  20min  150-225</p>
-<p>独立写作：讨论性话题 写 30min 480</p>
-<p>考试时间过长，做到最后的写作部分体乏心累，整理个模板供考试使用。</p>
+    <title>2020 新的开始</title>
+    <url>/2020/01/16/2020-%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
+    <content><![CDATA[<p>也不知道2019年里我改变了多少，依然那么单纯，幻想，焦虑，抑郁，仍然不知道自己现在能不能接受自己，一无是处，一事无成，那有如何呢，都过去了呢，也回不去了呢。</p>
+<p>想过2019年曾自己立了无数个flag，现在又实现了几个，对未来还是好迷茫，感受不到光。</p>
+<p>人生下来有什么意义呢，活着，死去。时间冲刷后又留下了什么，死后又去了哪里？</p>
 <span id="more"></span>
 
-<p>独立写作包括</p>
-<p>开头段：100</p>
-<p>两个论证段：170 + 170</p>
-<p>结尾段： 60</p>
-<h3 id="开头段模板"><a href="#开头段模板" class="headerlink" title="开头段模板"></a>开头段模板</h3><p>The issue regarding <strong>话题</strong>,in this day and age,has never failed to arouse the public concern and at the same time provoke a heated debate among individuals.</p>
-<p>Some are inclined to be strong believers in the extreme claim that <strong>反方观点</strong>.</p>
-<p>Perhaps sound and attractive as their argument seems,but it can hardly bear closer analysis.</p>
-<p>Accordingly,I,without hesitation,advocate that <strong>个人观点</strong> on account of the following evident reasons and examples.</p>
-<h4 id="开头段例-TPO-22-Agree-or-Disagree"><a href="#开头段例-TPO-22-Agree-or-Disagree" class="headerlink" title="开头段例. TPO 22 Agree or Disagree ?"></a><strong>开头段例. TPO 22 Agree or Disagree ?</strong></h4><p>Teachers should not make their social or political views known to students in the classroom.</p>
-<p>The issue regarding <strong>whether teachers should express their political views to students</strong>,in this day and age,has never failed to arouse the public concern and at the same time provoke a heated debate among individuals.</p>
-<p>Some are inclined to be strong believers in the extreme claim that <strong>teachers are not allow to make their social views known to their young students</strong>.</p>
-<p>Perhaps sound and attractive as their argument seems,but it can hardly bear closer analysis.</p>
-<p>Accordingly,I,without hesitation,advocate that <strong>the social view from teachers plays a crucial  role in the development of students</strong> on account of the following evident reasons and examples.</p>
-<h3 id="论述段模板"><a href="#论述段模板" class="headerlink" title="论述段模板"></a>论述段模板</h3><p>1主题句 + 2-4解释句 + 2-4例证句 + 1结论句</p>
-<p>On the one hand, <strong>主题句</strong>.To be more specific,<strong>解释句</strong>.This point can be better and further supported by the example from __.<strong>展开例证</strong>.Obviously,this example may inform us that <strong>结论句</strong>.</p>
-<p>On the other, <strong>主题句</strong>.Precisely,<strong>解释句</strong>.I can think of no better illustration for this point than the example from __.<strong>展开例证</strong>.Apparently,we can learn from the example that <strong>结论句</strong>.</p>
-<h4 id="主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因"><a href="#主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因" class="headerlink" title="主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因"></a>主题句：言简意赅、只给理由、不做解释、包含题目要素和直接原因</h4><h4 id="解释句：在主题句的原因和结果中间加入因果链"><a href="#解释句：在主题句的原因和结果中间加入因果链" class="headerlink" title="解释句：在主题句的原因和结果中间加入因果链"></a>解释句：在主题句的原因和结果中间加入因果链</h4><h5 id="逻辑链接词"><a href="#逻辑链接词" class="headerlink" title="逻辑链接词"></a>逻辑链接词</h5><p>连词：because, since, as, for, so</p>
-<p>链接短语： because of, due to, owing to, thanks to, as a result of, on account of </p>
-<p>副词：therefore, thus, hence, accordingly, consequently</p>
-<h5 id="三种句式结构"><a href="#三种句式结构" class="headerlink" title="三种句式结构"></a>三种句式结构</h5><p>非限制性定语从句：分词结构；so…that&#x2F;such…that结构</p>
-<p>The competition is severe, so we have to work hard.</p>
-<p>Because the competition is severe,we have to work hard.</p>
-<p>Due to the severe competition, we have to work hard.</p>
-<p>The competition is severe;therefore,we have to work hard.</p>
-<p>The competition is severe,which pushes us to work hard.</p>
-<p>The competition is severe,pushing us to work hard.</p>
-<p>The competition is so severe that we have to work hard.</p>
-<p><strong>eg.  主题句：Studying abroad can help us to cultivate our independence</strong></p>
-<p>解释句：<strong>To be more specific</strong>, <strong>due to</strong> studying abroad, we have to live in <strong>such a new environment</strong> that it is inevitable for us to be far away from our parents and friends, <strong>leading to</strong> the lack of the assistance from them; <strong>therefore</strong>,when we come across problems,we have to face and deal with them on our own, <strong>in the process of which</strong>,we are bound to master some relevant capabilities and accumulate much more experience,<strong>so</strong> our independence can be undoubtedly cultivated.</p>
-<h4 id="例证：编造数据-x2F-虚空朋友"><a href="#例证：编造数据-x2F-虚空朋友" class="headerlink" title="例证：编造数据&#x2F;虚空朋友"></a>例证：编造数据&#x2F;虚空朋友</h4><p>开头模板</p>
-<p>This point can be better and further supported by the example from <strong>事例</strong></p>
-<p>I can think of no better illustration for this point than the example from <strong>事例</strong></p>
-<p>虚假数据&#x2F;报告起手句式</p>
-<p>According to a recent survey carried out by a local newspaper agency&#x2F;CCTV after polling thousands of <strong><strong>群体</strong></strong>, <strong>_编造的数据&#x2F;统计结果</strong>_.</p>
-<p>eg. Eighty percent of parents said their children became more independent and responsible after studying abroad.</p>
-<h4 id="结论句：一句话总结"><a href="#结论句：一句话总结" class="headerlink" title="结论句：一句话总结"></a>结论句：一句话总结</h4><p>Obviously,this example may inform us that  __<strong>改写的主题句</strong> __.</p>
-<p>Apparently,we can learn from the example that  __<strong>改写的主题句</strong> __.</p>
-<h4 id="论证段例"><a href="#论证段例" class="headerlink" title="论证段例"></a>论证段例</h4><p>On the one hand, studying abroad can help us to cultivate our independence.</p>
-<p>To be more specific, due to studying abroad, we have to live in such a new environment that it is inevitable for us to be far away from our parents and friends, leading to the lack of the assistance from them; therefore,when we come across problems,we have to face and deal with them on our own, in the process of which,we are bound to master some relevant capabilities and accumulate much more experience,so our independence can be undoubtedly cultivated.</p>
-<p>This point can be better and further supported by the example from a report from CCTV. According to the recent survey carried out by CCTV after polling thousands of parents, eighty percent of parents said their children became more independent and responsible after studying abroad.</p>
-<p>Obviously, this example may inform us that independence can be cultivated by studying abroad.</p>
-<h3 id="结尾段模板"><a href="#结尾段模板" class="headerlink" title="结尾段模板"></a>结尾段模板</h3><p>Considering all the reasons and examples discussed above, we can safely come to the conclusion that _<strong>改写个人观点</strong> _,which should be definitely attributed to the two main points —— __<strong>A and B (两个语法结构相同的名词短语，用来概括两个论证段主题句)</strong> __.</p>
+<p>最近一直在做噩梦，梦见自己死去，也不知道自己到底梦见了多少回，等我慢慢地由恐惧变成了适应，我也逐渐开始麻木，这样的梦也消失了</p>
+<p>我常常幻想着自己的未来，我的未来是怎样的呢，看着网上的大亨衣食无忧游戏人间，我却只能看到自己未来忙于生计养活自己，我还是没有遇见我心仪的人，一个人潦草度日</p>
+<p>我一直不是一个贫困的人，我愧为人</p>
+<p>不想平庸，却无能为力</p>
+<p>发了那么多牢骚还是带面对现实，唉，晚安世界，或许</p>
+<p>永别世界</p>
+<p>今天早上又起的很晚，制定好的英语计划没有开始就已经结束，拖延症晚期，唉</p>
+<p>去医院做了做检查，中度抑郁，开了半年来士普和百适可，希望能恢复吧</p>
+<p>心态崩了</p>
 ]]></content>
       <categories>
-        <category>TOEFL</category>
+        <category>随笔</category>
       </categories>
-      <tags>
-        <tag>note</tag>
-        <tag>English</tag>
-        <tag>TOEFL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>洛谷[P3372]线段树模板1</title>
-    <url>/2019/11/16/%E6%B4%9B%E8%B0%B7-P3372-%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF1/</url>
-    <content><![CDATA[<h1 id="【模板】线段树-1"><a href="#【模板】线段树-1" class="headerlink" title="【模板】线段树 1"></a>【模板】线段树 1</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>如题，已知一个数列，你需要进行下面两种操作：</p>
-<ol>
-<li>将某区间每一个数加上 $k$。</li>
-<li>求出某区间每一个数的和。</li>
-</ol>
-<span id="more"></span>
-
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行包含两个整数 $n, m$，分别表示该数列数字的个数和操作的总个数。</p>
-<p>第二行包含 $n$ 个用空格分隔的整数，其中第 $i$ 个数字表示数列第 $i$ 项的初始值。</p>
-<p>接下来 $m$ 行每行包含 $3$ 或 $4$ 个整数，表示一个操作，具体如下：</p>
-<ol>
-<li><code>1 x y k</code>：将区间 $[x, y]$ 内每个数加上 $k$。</li>
-<li><code>2 x y</code>：输出区间 $[x, y]$ 内每个数的和。</li>
-</ol>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出包含若干行整数，即为所有操作 2 的结果。</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 5</span><br><span class="line">1 5 4 2 3</span><br><span class="line">2 2 4</span><br><span class="line">1 2 3 2</span><br><span class="line">2 3 4</span><br><span class="line">1 1 5 1</span><br><span class="line">2 1 4</span><br></pre></td></tr></table></figure>
-
-<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">11</span><br><span class="line">8</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
-
-<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>对于 $30%$ 的数据：$n \le 8$，$m \le 10$。<br>对于 $70%$ 的数据：$n \le {10}^3$，$m \le {10}^4$。<br>对于 $100%$ 的数据：$1 \le n, m \le {10}^5$。</p>
-<p>保证任意时刻数列中所有元素的绝对值之和 $\le {10}^{18}$。</p>
-<p><strong>【样例解释】</strong></p>
-<p><img src="https://cdn.luogu.com.cn/upload/pic/2251.png"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> lr rt &lt;&lt; 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rr rt &lt;&lt; 1 | 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> lson l, m, rt &lt;&lt; 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rson m + 1, r, rt &lt;&lt; 1 | 1</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> N, M, n, m;</span><br><span class="line">LL add[maxn &lt;&lt; <span class="number">2</span>], sum[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> _lgl&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">pushup</span><span class="params">(<span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        sum[rt] = sum[lr] + sum[rr];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">pushdown</span><span class="params">(<span class="type">int</span> rt,<span class="type">int</span> m)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(add[rt]) &#123;</span><br><span class="line">            add[lr] += add[rt];</span><br><span class="line">            add[rr] += add[rt];</span><br><span class="line">            sum[lr] += add[rt] * (m - (m &gt;&gt; <span class="number">1</span>));</span><br><span class="line">            sum[rr] += add[rt] * (m &gt;&gt; <span class="number">1</span>); </span><br><span class="line">            add[rt] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l == r)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;sum[rt]);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(lson);</span><br><span class="line">        <span class="built_in">build</span>(rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> c, <span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) &#123;</span><br><span class="line">            add[rt] += c;</span><br><span class="line">            sum[rt] += (LL) c * (r - l + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt, r - l + <span class="number">1</span>);</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= m) <span class="built_in">update</span>(L, R, c, lson);</span><br><span class="line">        <span class="keyword">if</span>(m &lt; R) <span class="built_in">update</span>(L, R, c, rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> LL <span class="title">query</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) <span class="keyword">return</span> sum[rt];</span><br><span class="line">        <span class="built_in">pushdown</span>(rt, r - l + <span class="number">1</span>);</span><br><span class="line">        LL ret = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= m) ret += <span class="built_in">query</span>(L, R, lson);</span><br><span class="line">        <span class="keyword">if</span>(m &lt;  R) ret += <span class="built_in">query</span>(L, R, rson);</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;N,&amp;M);</span><br><span class="line">        <span class="built_in">build</span>(<span class="number">1</span>, N, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">while</span>(M --)&#123;</span><br><span class="line">            <span class="type">int</span> a, b, c, skt;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;skt);</span><br><span class="line">            <span class="keyword">if</span>(skt == <span class="number">2</span>)&#123;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,<span class="built_in">query</span>(a, b, <span class="number">1</span>, N, <span class="number">1</span>));</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">                <span class="built_in">update</span>(a, b, c, <span class="number">1</span>, N, <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    _lgl::<span class="built_in">main</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Segment Tree</tag>
-      </tags>
   </entry>
   <entry>
     <title>洛谷[P3373]线段树模板2</title>
@@ -375,8 +357,55 @@
       </tags>
   </entry>
   <entry>
-    <title>背包九讲回顾</title>
-    <url>/2022/09/10/%E8%83%8C%E5%8C%85%E4%B9%9D%E8%AE%B2%E5%9B%9E%E9%A1%BE/</url>
-    <content><![CDATA[]]></content>
+    <title>洛谷[P3372]线段树模板1</title>
+    <url>/2019/11/16/%E6%B4%9B%E8%B0%B7-P3372-%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF1/</url>
+    <content><![CDATA[<h1 id="【模板】线段树-1"><a href="#【模板】线段树-1" class="headerlink" title="【模板】线段树 1"></a>【模板】线段树 1</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>如题，已知一个数列，你需要进行下面两种操作：</p>
+<ol>
+<li>将某区间每一个数加上 $k$。</li>
+<li>求出某区间每一个数的和。</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行包含两个整数 $n, m$，分别表示该数列数字的个数和操作的总个数。</p>
+<p>第二行包含 $n$ 个用空格分隔的整数，其中第 $i$ 个数字表示数列第 $i$ 项的初始值。</p>
+<p>接下来 $m$ 行每行包含 $3$ 或 $4$ 个整数，表示一个操作，具体如下：</p>
+<ol>
+<li><code>1 x y k</code>：将区间 $[x, y]$ 内每个数加上 $k$。</li>
+<li><code>2 x y</code>：输出区间 $[x, y]$ 内每个数的和。</li>
+</ol>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出包含若干行整数，即为所有操作 2 的结果。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 5</span><br><span class="line">1 5 4 2 3</span><br><span class="line">2 2 4</span><br><span class="line">1 2 3 2</span><br><span class="line">2 3 4</span><br><span class="line">1 1 5 1</span><br><span class="line">2 1 4</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">11</span><br><span class="line">8</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>对于 $30%$ 的数据：$n \le 8$，$m \le 10$。<br>对于 $70%$ 的数据：$n \le {10}^3$，$m \le {10}^4$。<br>对于 $100%$ 的数据：$1 \le n, m \le {10}^5$。</p>
+<p>保证任意时刻数列中所有元素的绝对值之和 $\le {10}^{18}$。</p>
+<p><strong>【样例解释】</strong></p>
+<p><img src="https://cdn.luogu.com.cn/upload/pic/2251.png"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> lr rt &lt;&lt; 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rr rt &lt;&lt; 1 | 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> lson l, m, rt &lt;&lt; 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rson m + 1, r, rt &lt;&lt; 1 | 1</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> N, M, n, m;</span><br><span class="line">LL add[maxn &lt;&lt; <span class="number">2</span>], sum[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> _lgl&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">pushup</span><span class="params">(<span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        sum[rt] = sum[lr] + sum[rr];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">pushdown</span><span class="params">(<span class="type">int</span> rt,<span class="type">int</span> m)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(add[rt]) &#123;</span><br><span class="line">            add[lr] += add[rt];</span><br><span class="line">            add[rr] += add[rt];</span><br><span class="line">            sum[lr] += add[rt] * (m - (m &gt;&gt; <span class="number">1</span>));</span><br><span class="line">            sum[rr] += add[rt] * (m &gt;&gt; <span class="number">1</span>); </span><br><span class="line">            add[rt] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l == r)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;sum[rt]);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(lson);</span><br><span class="line">        <span class="built_in">build</span>(rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> c, <span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) &#123;</span><br><span class="line">            add[rt] += c;</span><br><span class="line">            sum[rt] += (LL) c * (r - l + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt, r - l + <span class="number">1</span>);</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= m) <span class="built_in">update</span>(L, R, c, lson);</span><br><span class="line">        <span class="keyword">if</span>(m &lt; R) <span class="built_in">update</span>(L, R, c, rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> LL <span class="title">query</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= l &amp;&amp; r &lt;= R) <span class="keyword">return</span> sum[rt];</span><br><span class="line">        <span class="built_in">pushdown</span>(rt, r - l + <span class="number">1</span>);</span><br><span class="line">        LL ret = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(L &lt;= m) ret += <span class="built_in">query</span>(L, R, lson);</span><br><span class="line">        <span class="keyword">if</span>(m &lt;  R) ret += <span class="built_in">query</span>(L, R, rson);</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;N,&amp;M);</span><br><span class="line">        <span class="built_in">build</span>(<span class="number">1</span>, N, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">while</span>(M --)&#123;</span><br><span class="line">            <span class="type">int</span> a, b, c, skt;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;skt);</span><br><span class="line">            <span class="keyword">if</span>(skt == <span class="number">2</span>)&#123;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,<span class="built_in">query</span>(a, b, <span class="number">1</span>, N, <span class="number">1</span>));</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">                <span class="built_in">update</span>(a, b, c, <span class="number">1</span>, N, <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    _lgl::<span class="built_in">main</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Segment Tree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EK - Edmond-Karp</title>
+    <url>/2019/11/13/EK-Edmond-Karp/</url>
+    <content><![CDATA[<h1 id="EK-Edmond-Karp"><a href="#EK-Edmond-Karp" class="headerlink" title="EK - Edmond-Karp"></a>EK - Edmond-Karp</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// EK(Edmond-Karp) : 利用bfs实现，时间复杂度O（V*E^2）</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rg register</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> _lgl&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n, m, s, t, tot, head[maxn]; </span><br><span class="line">    <span class="type">bool</span> vis[maxn];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">edge</span>&#123;</span><br><span class="line">        <span class="type">int</span> to, val, next;</span><br><span class="line">    &#125;e[maxn &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Pre</span>&#123;</span><br><span class="line">        <span class="type">int</span> point, edge;</span><br><span class="line">    &#125;pre[maxn];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> z)</span></span>&#123;</span><br><span class="line">        e[++tot].to = y;</span><br><span class="line">        e[tot].next = head[x];</span><br><span class="line">        e[tot].val  = z;</span><br><span class="line">        head[x] = tot;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">rd</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="type">int</span> f = <span class="number">1</span>, s = <span class="number">0</span>; <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">        <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c = <span class="built_in">getchar</span>()) <span class="keyword">if</span>(c == <span class="string">&#x27;-&#x27;</span>) f = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(; <span class="built_in">isdigit</span>(c);c = <span class="built_in">getchar</span>()) s = (s &lt;&lt; <span class="number">3</span>) + (s &lt;&lt; <span class="number">1</span>) + c - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span> f * s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</span><br><span class="line">        queue &lt;<span class="type">int</span>&gt; q; </span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">        <span class="built_in">memset</span>(pre,<span class="number">-1</span>, <span class="built_in">sizeof</span>(pre));</span><br><span class="line">        vis[s] = <span class="literal">true</span>; q.<span class="built_in">push</span>(s);</span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            <span class="type">int</span> now = q.<span class="built_in">front</span>(); q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = head[now]; i; i = e[i].next)&#123;</span><br><span class="line">                <span class="type">int</span> to = e[i].to;</span><br><span class="line">                <span class="keyword">if</span>(!vis[to] &amp;&amp; e[i].val)&#123;</span><br><span class="line">                    pre[to].point = now;</span><br><span class="line">                    pre[to].edge  = i;</span><br><span class="line">                    <span class="keyword">if</span>(to == t) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                    vis[to] = <span class="number">1</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(to);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">EK</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">bfs</span>())&#123;</span><br><span class="line">            <span class="type">int</span> mi = inf;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = t; i != s; i = pre[i].point) mi = mi &lt; e[pre[i].edge].val ? mi : e[pre[i].edge].val;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = t; i != s; i = pre[i].point)&#123;</span><br><span class="line">                e[pre[i].edge].val -= mi;</span><br><span class="line">                e[pre[i].edge^<span class="number">1</span>].val += mi;</span><br><span class="line">            &#125;</span><br><span class="line">            ans += mi;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        n = <span class="built_in">rd</span>(), m = <span class="built_in">rd</span>(), s = <span class="built_in">rd</span>(), t = <span class="built_in">rd</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> x, y, z, i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">            x = <span class="built_in">rd</span>(), y = <span class="built_in">rd</span>(), z = <span class="built_in">rd</span>(), <span class="built_in">add</span>(x,y,z), <span class="built_in">add</span>(y,x,<span class="number">0</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,<span class="built_in">EK</span>());</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    _lgl::<span class="built_in">main</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>网络流</tag>
+        <tag>最大流</tag>
+      </tags>
   </entry>
 </search>
