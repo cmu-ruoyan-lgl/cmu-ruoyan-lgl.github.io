@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"cmu-ruoyan-lgl.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/b6dbddb6.js","daovoice")
+ daovoice('init', {
+  app_id: "7137ef47"
+});
+daovoice('update');
+ </script>
+
+    <meta name="description" content="首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算任意多边形面积">
+<meta property="og:url" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/index.html">
+<meta property="og:site_name" content="_lgl の blog">
+<meta property="og:description" content="首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131001543243.png">
+<meta property="og:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131001611791.png">
+<meta property="og:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131002408410.png">
+<meta property="og:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131002432721.png">
+<meta property="og:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131010121002.png">
+<meta property="og:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131010218415.png">
+<meta property="article:published_time" content="2023-01-30T16:07:32.000Z">
+<meta property="article:modified_time" content="2023-01-30T17:03:36.184Z">
+<meta property="article:author" content="RuoYan">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog/source_posts/计算任意多边形面积/image-20230131001543243.png">
+
+
+<link rel="canonical" href="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/","path":"2023/01/31/计算任意多边形面积/","title":"计算任意多边形面积"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>计算任意多边形面积 | _lgl の blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">_lgl の blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">和每一个即将分别的朋友大方拥抱，微笑告别</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E4%BB%8E%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%A4%E4%B8%AA%E5%90%91%E9%87%8F%E8%AE%A1%E7%AE%97%E4%B8%89%E8%A7%92%E5%BD%A2%E9%9D%A2%E7%A7%AF%E8%BF%9B%E8%A1%8C%E6%8E%A8%E5%AF%BC%EF%BC%8C%E6%89%BE%E5%88%B0%E9%80%9A%E8%BF%87%E5%88%86%E8%A7%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%BA%E4%B8%89%E8%A7%92%E5%BD%A2%E8%BF%9B%E8%A1%8C%E8%AE%A1%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E5%86%8D%E9%80%9A%E8%BF%87%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC%E5%87%BA%E7%AE%80%E5%8D%95%E9%80%9A%E7%94%A8%E7%9A%84%E5%85%AC%E5%BC%8F%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E8%AE%A1%E7%AE%97%E5%87%B8%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E6%97%B6%EF%BC%8C%E5%B0%86%E5%87%B8%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%BB%BB%E5%8F%96%E4%B8%80%E7%82%B9%E4%B8%8E%E4%B8%8D%E7%9B%B8%E9%82%BB%E7%82%B9%E8%BF%9E%E6%8E%A5%EF%BC%8C%E5%B0%86%E5%9B%BE%E5%BD%A2%E5%88%86%E8%A7%A3%E6%88%90%E5%A4%9A%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%8C%E4%BD%BF%E7%94%A8%E4%B8%89%E8%A7%92%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F%E6%B1%82%E5%92%8C%E5%8D%B3%E5%BE%97%E3%80%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">在计算凸多边形面积时，将凸多边形任取一点与不相邻点连接，将图形分解成多个三角形，使用三角面积公式求和即得。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E8%AE%A1%E7%AE%97%E5%87%B9%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF%E6%97%B6%EF%BC%8C%E4%BB%BB%E5%8F%96%E4%B8%80%E7%82%B9%E8%BF%9E%E7%BB%AD%E5%88%86%E5%89%B2%E5%87%BA%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2%E9%9D%A2%E7%A7%AF%E7%9B%B8%E5%8A%A0%E4%B8%8D%E4%B8%80%E5%AE%9A%E8%83%BD%E5%BE%97%E5%88%B0%E6%AD%A3%E7%A1%AE%E7%9A%84%E9%9D%A2%E7%A7%AF%EF%BC%8C%E4%BD%86%E5%9C%A8%E5%88%86%E5%89%B2%E5%90%8E%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E5%90%91%E9%87%8F%E5%8F%89%E4%B9%98%E7%9A%84%E6%AD%A3%E8%B4%9F%E5%8F%B7%E7%A1%AE%E5%AE%9A%E6%AD%A3%E8%B4%9F%EF%BC%8C%E7%9B%B8%E5%8A%A0%E5%BE%97%E5%88%B0%E7%9A%84%E6%80%BB%E5%92%8C%E5%8F%96%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%B0%B1%E6%98%AF%E9%9D%A2%E7%A7%AF%E3%80%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">在计算凹多边形面积时，任取一点连续分割出的三角形面积相加不一定能得到正确的面积，但在分割后，可以通过向量叉乘的正负号确定正负，相加得到的总和取绝对值就是面积。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%88%E6%98%8E%E6%98%BE%EF%BC%8C%E7%AC%AC%E4%BA%8C%E6%AD%A5%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BA%86%EF%BC%8C%E4%BD%86%E8%A7%82%E5%AF%9F%E5%88%B0%E5%85%B6%E4%B8%AD%E6%98%AF%E5%8F%96%E7%9A%84%E4%BB%BB%E6%84%8F%E4%B8%80%E7%82%B9%E8%BF%9B%E8%A1%8C%E5%88%86%E5%89%B2%EF%BC%8C%E8%BF%99%E8%AF%B4%E6%98%8E%E8%BF%99%E4%B8%AA%E7%82%B9%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%8F%AF%E4%BB%A5%E5%9C%A8%E5%A4%9A%E8%BE%B9%E5%BD%A2%E5%86%85%E9%83%A8%E4%BB%BB%E6%84%8F%E5%9C%B0%E6%96%B9%EF%BC%8C%E9%82%A3%E4%B9%88%E8%BF%99%E4%B8%AA%E7%82%B9%E7%9A%84%E6%89%80%E6%9C%89%E4%BF%A1%E6%81%AF%E4%B8%80%E5%AE%9A%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%AE%A1%E7%AE%97%E4%B8%AD%E6%B6%88%E5%8E%BB%E3%80%82"><span class="nav-number">1.0.3.</span> <span class="nav-text">很明显，第二步中的方法可以计算任意多边形的面积了，但观察到其中是取的任意一点进行分割，这说明这个点的位置可以在多边形内部任意地方，那么这个点的所有信息一定可以在计算中消去。</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="RuoYan"
+      src="/images/ruoyan.jpg">
+  <p class="site-author-name" itemprop="name">RuoYan</p>
+  <div class="site-description" itemprop="description">Stay hungry, Stay foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cmu-ruoyan-lgl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cmu-ruoyan-lgl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:cmu.liugelei@gmail.com" title="E-Mail → mailto:cmu.liugelei@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://rqy.moe/" title="https:&#x2F;&#x2F;rqy.moe&#x2F;" rel="noopener" target="_blank">rqy</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.ipandai.club/" title="https:&#x2F;&#x2F;blog.ipandai.club&#x2F;" rel="noopener" target="_blank">EZ4ZZW</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cmu-ruoyan-lgl.github.io/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ruoyan.jpg">
+      <meta itemprop="name" content="RuoYan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="_lgl の blog">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="计算任意多边形面积 | _lgl の blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算任意多边形面积
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-01-31 00:07:32 / 修改时间：01:03:36" itemprop="dateCreated datePublished" datetime="2023-01-31T00:07:32+08:00">2023-01-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。"><a href="#首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。" class="headerlink" title="首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。"></a>首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。</h2><span id="more"></span>
+
+<h4 id="在计算凸多边形面积时，将凸多边形任取一点与不相邻点连接，将图形分解成多个三角形，使用三角面积公式求和即得。"><a href="#在计算凸多边形面积时，将凸多边形任取一点与不相邻点连接，将图形分解成多个三角形，使用三角面积公式求和即得。" class="headerlink" title="在计算凸多边形面积时，将凸多边形任取一点与不相邻点连接，将图形分解成多个三角形，使用三角面积公式求和即得。"></a>在计算凸多边形面积时，将凸多边形任取一点与不相邻点连接，将图形分解成多个三角形，使用三角面积公式求和即得。</h4><p><img src="/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog\source_posts\计算任意多边形面积\image-20230131001543243.png" alt="image-20230131001543243"></p>
+<p><img src="/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog\source_posts\计算任意多边形面积\image-20230131001611791.png" alt="image-20230131001611791"></p>
+<h4 id="在计算凹多边形面积时，任取一点连续分割出的三角形面积相加不一定能得到正确的面积，但在分割后，可以通过向量叉乘的正负号确定正负，相加得到的总和取绝对值就是面积。"><a href="#在计算凹多边形面积时，任取一点连续分割出的三角形面积相加不一定能得到正确的面积，但在分割后，可以通过向量叉乘的正负号确定正负，相加得到的总和取绝对值就是面积。" class="headerlink" title="在计算凹多边形面积时，任取一点连续分割出的三角形面积相加不一定能得到正确的面积，但在分割后，可以通过向量叉乘的正负号确定正负，相加得到的总和取绝对值就是面积。"></a>在计算凹多边形面积时，任取一点连续分割出的三角形面积相加不一定能得到正确的面积，但在分割后，可以通过向量叉乘的正负号确定正负，相加得到的总和取绝对值就是面积。</h4><p><img src="/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog\source_posts\计算任意多边形面积\image-20230131002408410.png" alt="image-20230131002408410"></p>
+<p><img src="/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog\source_posts\计算任意多边形面积\image-20230131002432721.png" alt="image-20230131002432721"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">points</span> &#123;</span><br><span class="line">	<span class="type">double</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vector&lt;points&gt; Points;</span><br><span class="line"><span class="type">double</span> x0 = Points[<span class="number">0</span>].x, y0 = Points[<span class="number">0</span>].y, sumArea = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; Points.<span class="built_in">size</span>() - <span class="number">1</span>; i ++) &#123;</span><br><span class="line">	<span class="type">double</span> triangle = x0 * Points[i].y</span><br><span class="line">					  + Points[i].x * Points[i + <span class="number">1</span>].y</span><br><span class="line">					  + Points[i + <span class="number">1</span>].x * y0</span><br><span class="line">					  - x0 * Points[i + <span class="number">1</span>].y</span><br><span class="line">					  - Points[i].x * y0</span><br><span class="line">					  - Points[i + <span class="number">1</span>].x * Points[i].y;</span><br><span class="line">	sumArea += triangle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">abs</span>(sumArea / <span class="number">2.0</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="很明显，第二步中的方法可以计算任意多边形的面积了，但观察到其中是取的任意一点进行分割，这说明这个点的位置可以在多边形内部任意地方，那么这个点的所有信息一定可以在计算中消去。"><a href="#很明显，第二步中的方法可以计算任意多边形的面积了，但观察到其中是取的任意一点进行分割，这说明这个点的位置可以在多边形内部任意地方，那么这个点的所有信息一定可以在计算中消去。" class="headerlink" title="很明显，第二步中的方法可以计算任意多边形的面积了，但观察到其中是取的任意一点进行分割，这说明这个点的位置可以在多边形内部任意地方，那么这个点的所有信息一定可以在计算中消去。"></a>很明显，第二步中的方法可以计算任意多边形的面积了，但观察到其中是取的任意一点进行分割，这说明这个点的位置可以在多边形内部任意地方，那么这个点的所有信息一定可以在计算中消去。</h4><p><img src="/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog\source_posts\计算任意多边形面积\image-20230131010121002.png" alt="image-20230131010121002"></p>
+<p>这个数学公式叫<strong>鞋带公式</strong>。</p>
+<p><img src="/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/Blog\source_posts\计算任意多边形面积\image-20230131010218415.png" alt="image-20230131010218415"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="RuoYan 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="RuoYan 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/note/" rel="tag"># note</a>
+              <a href="/tags/math/" rel="tag"># math</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/12/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" rel="prev" title="位运算奇技淫巧">
+                  <i class="fa fa-chevron-left"></i> 位运算奇技淫巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">RuoYan</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
