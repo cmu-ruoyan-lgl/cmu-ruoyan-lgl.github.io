@@ -13,6 +13,143 @@
       </tags>
   </entry>
   <entry>
+    <title>Git常用命令整理</title>
+    <url>/2023/02/04/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>版本管理工具git的常用命令整理。</p>
+<span id="more"></span>
+
+<h3 id="配置操作"><a href="#配置操作" class="headerlink" title="配置操作"></a>配置操作</h3><h4 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&#x27;your name&#x27;</span></span><br><span class="line">git config --global user.email <span class="string">&#x27;your email&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="当前仓库配置"><a href="#当前仓库配置" class="headerlink" title="当前仓库配置"></a>当前仓库配置</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git config --local user.name <span class="string">&#x27;your name&#x27;</span></span><br><span class="line">git config --local user.email <span class="string">&#x27;your email&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="查看global配置"><a href="#查看global配置" class="headerlink" title="查看global配置"></a>查看global配置</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除global配置"><a href="#删除global配置" class="headerlink" title="删除global配置"></a>删除global配置</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git config --unset --global</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除当前仓库配置"><a href="#删除当前仓库配置" class="headerlink" title="删除当前仓库配置"></a>删除当前仓库配置</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git config --unset --local</span><br></pre></td></tr></table></figure>
+
+<h4 id="本地仓库管理"><a href="#本地仓库管理" class="headerlink" title="本地仓库管理"></a>本地仓库管理</h4><h5 id="查看变更情况"><a href="#查看变更情况" class="headerlink" title="查看变更情况"></a>查看变更情况</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<h5 id="将当前目录及其子目录下所有变更都加入到暂存区"><a href="#将当前目录及其子目录下所有变更都加入到暂存区" class="headerlink" title="将当前目录及其子目录下所有变更都加入到暂存区"></a>将当前目录及其子目录下所有变更都加入到暂存区</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<h5 id="将仓库内所以变更都加入到暂存区"><a href="#将仓库内所以变更都加入到暂存区" class="headerlink" title="将仓库内所以变更都加入到暂存区"></a>将仓库内所以变更都加入到暂存区</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git add -A</span><br></pre></td></tr></table></figure>
+
+<h5 id="将指定文件添加到暂存区"><a href="#将指定文件添加到暂存区" class="headerlink" title="将指定文件添加到暂存区"></a>将指定文件添加到暂存区</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git add file1 file2 file3</span><br></pre></td></tr></table></figure>
+
+<h5 id="比较工作区和暂存区的所有差异"><a href="#比较工作区和暂存区的所有差异" class="headerlink" title="比较工作区和暂存区的所有差异"></a>比较工作区和暂存区的所有差异</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+
+<h5 id="比较某文件区和暂存区的差异"><a href="#比较某文件区和暂存区的差异" class="headerlink" title="比较某文件区和暂存区的差异"></a>比较某文件区和暂存区的差异</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git diff file</span><br></pre></td></tr></table></figure>
+
+<h5 id="比较暂存区和HEAD的所有差异"><a href="#比较暂存区和HEAD的所有差异" class="headerlink" title="比较暂存区和HEAD的所有差异"></a>比较暂存区和HEAD的所有差异</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
+
+<h5 id="比较某文件暂存区和HEAD的差异"><a href="#比较某文件暂存区和HEAD的差异" class="headerlink" title="比较某文件暂存区和HEAD的差异"></a>比较某文件暂存区和HEAD的差异</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git diff --cached file</span><br></pre></td></tr></table></figure>
+
+<h5 id="比较某文件工作区和HEAD的差异"><a href="#比较某文件工作区和HEAD的差异" class="headerlink" title="比较某文件工作区和HEAD的差异"></a>比较某文件工作区和HEAD的差异</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git diff HEAD file</span><br></pre></td></tr></table></figure>
+
+<h5 id="创建commit"><a href="#创建commit" class="headerlink" title="创建commit"></a>创建commit</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git commit</span><br></pre></td></tr></table></figure>
+
+<h5 id="将工作区指定文件恢复成和暂存区一致"><a href="#将工作区指定文件恢复成和暂存区一致" class="headerlink" title="将工作区指定文件恢复成和暂存区一致"></a>将工作区指定文件恢复成和暂存区一致</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git checkout file1 file2 file3</span><br></pre></td></tr></table></figure>
+
+<h5 id="将暂存区指定文件恢复成和HEAD一致"><a href="#将暂存区指定文件恢复成和HEAD一致" class="headerlink" title="将暂存区指定文件恢复成和HEAD一致"></a>将暂存区指定文件恢复成和HEAD一致</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git reset file1 file2 file3</span><br></pre></td></tr></table></figure>
+
+<h5 id="将暂存区和工作区所有文件恢复成和HEAD一样"><a href="#将暂存区和工作区所有文件恢复成和HEAD一样" class="headerlink" title="将暂存区和工作区所有文件恢复成和HEAD一样"></a>将暂存区和工作区所有文件恢复成和HEAD一样</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git reset --hard</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用difftool比较两个commit差异"><a href="#使用difftool比较两个commit差异" class="headerlink" title="使用difftool比较两个commit差异"></a>使用difftool比较两个commit差异</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git difftool commit1 commit2</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看哪些文件没有被git管控"><a href="#查看哪些文件没有被git管控" class="headerlink" title="查看哪些文件没有被git管控"></a>查看哪些文件没有被git管控</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git ls-files --others</span><br></pre></td></tr></table></figure>
+
+<h5 id="将未处理完的变更先保存在stash中"><a href="#将未处理完的变更先保存在stash中" class="headerlink" title="将未处理完的变更先保存在stash中"></a>将未处理完的变更先保存在stash中</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
+
+<h5 id="临时任务处理完后继续之前的工作"><a href="#临时任务处理完后继续之前的工作" class="headerlink" title="临时任务处理完后继续之前的工作"></a>临时任务处理完后继续之前的工作</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git stash pop <span class="comment">// 不保留stash</span></span><br><span class="line">git stash apply <span class="comment">// 保留stash</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="查看所有stash"><a href="#查看所有stash" class="headerlink" title="查看所有stash"></a>查看所有stash</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git stash list</span><br></pre></td></tr></table></figure>
+
+<h5 id="取回某次stash的变更"><a href="#取回某次stash的变更" class="headerlink" title="取回某次stash的变更"></a>取回某次stash的变更</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git stash pop stash@&#123;数字n&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="优雅修改最后一次commit"><a href="#优雅修改最后一次commit" class="headerlink" title="优雅修改最后一次commit"></a>优雅修改最后一次commit</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+
+<h4 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h4><h5 id="查看当前工作分支及本地分支"><a href="#查看当前工作分支及本地分支" class="headerlink" title="查看当前工作分支及本地分支"></a>查看当前工作分支及本地分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch -v</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看本地和远程分支"><a href="#查看本地和远程分支" class="headerlink" title="查看本地和远程分支"></a>查看本地和远程分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch -av</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看远程分支"><a href="#查看远程分支" class="headerlink" title="查看远程分支"></a>查看远程分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch -rv</span><br></pre></td></tr></table></figure>
+
+<h5 id="切换到指定分支"><a href="#切换到指定分支" class="headerlink" title="切换到指定分支"></a>切换到指定分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git checkout 指定分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="基于当前分支创建新分支"><a href="#基于当前分支创建新分支" class="headerlink" title="基于当前分支创建新分支"></a>基于当前分支创建新分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch 新分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="基于指定分支创建新分支"><a href="#基于指定分支创建新分支" class="headerlink" title="基于指定分支创建新分支"></a>基于指定分支创建新分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch 新分支 指定分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="基于某个commit创建分支"><a href="#基于某个commit创建分支" class="headerlink" title="基于某个commit创建分支"></a>基于某个commit创建分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch 新分支 commit的id</span><br></pre></td></tr></table></figure>
+
+<h5 id="创建并切换到该分支，此分支以当前的master为基础创建"><a href="#创建并切换到该分支，此分支以当前的master为基础创建" class="headerlink" title="创建并切换到该分支，此分支以当前的master为基础创建"></a>创建并切换到该分支，此分支以当前的master为基础创建</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git checkout -b 新分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="安全删除本地某分支"><a href="#安全删除本地某分支" class="headerlink" title="安全删除本地某分支"></a>安全删除本地某分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch -d 要删除的分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="强行删除本地某分支"><a href="#强行删除本地某分支" class="headerlink" title="强行删除本地某分支"></a>强行删除本地某分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch -D 要删除的分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除已合并到master分支的所有本地分支"><a href="#删除已合并到master分支的所有本地分支" class="headerlink" title="删除已合并到master分支的所有本地分支"></a>删除已合并到master分支的所有本地分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git branch --merged master | grep -v <span class="string">&#x27;^\*\| master&#x27;</span> | xargs -n <span class="number">1</span> git branch -d</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除远端origin已不存在的所有本地分支"><a href="#删除远端origin已不存在的所有本地分支" class="headerlink" title="删除远端origin已不存在的所有本地分支"></a>删除远端origin已不存在的所有本地分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git remote prune origin</span><br></pre></td></tr></table></figure>
+
+<h5 id="将A分支合入到当前分支中且为merge创建commit"><a href="#将A分支合入到当前分支中且为merge创建commit" class="headerlink" title="将A分支合入到当前分支中且为merge创建commit"></a>将A分支合入到当前分支中且为merge创建commit</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git merge A分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="将A分支合入到B分支中且为merge创建commit"><a href="#将A分支合入到B分支中且为merge创建commit" class="headerlink" title="将A分支合入到B分支中且为merge创建commit"></a>将A分支合入到B分支中且为merge创建commit</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git merge A分支 B分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="将当前分支基于B分支做rebase，以便B分支合入当前分支"><a href="#将当前分支基于B分支做rebase，以便B分支合入当前分支" class="headerlink" title="将当前分支基于B分支做rebase，以便B分支合入当前分支"></a>将当前分支基于B分支做rebase，以便B分支合入当前分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git rebase B分支</span><br></pre></td></tr></table></figure>
+
+<h5 id="将A分支基于B分支做rebase，以便B分支合入A分支"><a href="#将A分支基于B分支做rebase，以便B分支合入A分支" class="headerlink" title="将A分支基于B分支做rebase，以便B分支合入A分支"></a>将A分支基于B分支做rebase，以便B分支合入A分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git rebase B分支 A分支</span><br></pre></td></tr></table></figure>
+
+<h4 id="变更历史"><a href="#变更历史" class="headerlink" title="变更历史"></a>变更历史</h4><h5 id="当前分支各个commit用一行显示"><a href="#当前分支各个commit用一行显示" class="headerlink" title="当前分支各个commit用一行显示"></a>当前分支各个commit用一行显示</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure>
+
+<h5 id="显示最近的n个commit"><a href="#显示最近的n个commit" class="headerlink" title="显示最近的n个commit"></a>显示最近的n个commit</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git log -n</span><br></pre></td></tr></table></figure>
+
+<h5 id="用图示显示所有分支的历史"><a href="#用图示显示所有分支的历史" class="headerlink" title="用图示显示所有分支的历史"></a>用图示显示所有分支的历史</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git log --oneline --graph --all</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看涉及到某文件变更的所有commit"><a href="#查看涉及到某文件变更的所有commit" class="headerlink" title="查看涉及到某文件变更的所有commit"></a>查看涉及到某文件变更的所有commit</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git log 文件</span><br></pre></td></tr></table></figure>
+
+<h5 id="某文件各行最后修改对应的commit以及作者"><a href="#某文件各行最后修改对应的commit以及作者" class="headerlink" title="某文件各行最后修改对应的commit以及作者"></a>某文件各行最后修改对应的commit以及作者</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git blame 文件</span><br></pre></td></tr></table></figure>
+
+<h4 id="标签操作"><a href="#标签操作" class="headerlink" title="标签操作"></a>标签操作</h4><h5 id="查看已有标签"><a href="#查看已有标签" class="headerlink" title="查看已有标签"></a>查看已有标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
+
+<h5 id="新建标签"><a href="#新建标签" class="headerlink" title="新建标签"></a>新建标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git tag v1<span class="number">.0</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="新建带备注标签"><a href="#新建带备注标签" class="headerlink" title="新建带备注标签"></a>新建带备注标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git tag -a v1<span class="number">.0</span> -m <span class="string">&#x27;备注&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="给指定的commit打标签"><a href="#给指定的commit打标签" class="headerlink" title="给指定的commit打标签"></a>给指定的commit打标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git tag v1<span class="number">.0</span> commitid</span><br></pre></td></tr></table></figure>
+
+<h5 id="推送一个本地标签"><a href="#推送一个本地标签" class="headerlink" title="推送一个本地标签"></a>推送一个本地标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git push origin v1<span class="number">.0</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="推送全部未推送过的本地标签"><a href="#推送全部未推送过的本地标签" class="headerlink" title="推送全部未推送过的本地标签"></a>推送全部未推送过的本地标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除一个本地标签"><a href="#删除一个本地标签" class="headerlink" title="删除一个本地标签"></a>删除一个本地标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git tag -d v1<span class="number">.0</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="删除一个远端标签"><a href="#删除一个远端标签" class="headerlink" title="删除一个远端标签"></a>删除一个远端标签</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git push origin :refs/tags/v1<span class="number">.0</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="远程交互"><a href="#远程交互" class="headerlink" title="远程交互"></a>远程交互</h4><h5 id="查看所有远端仓库"><a href="#查看所有远端仓库" class="headerlink" title="查看所有远端仓库"></a>查看所有远端仓库</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<h5 id="添加远端仓库"><a href="#添加远端仓库" class="headerlink" title="添加远端仓库"></a>添加远端仓库</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git remote add url</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除远端仓库"><a href="#删除远端仓库" class="headerlink" title="删除远端仓库"></a>删除远端仓库</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git remote remove remote的名称</span><br></pre></td></tr></table></figure>
+
+<h5 id="重命名远端仓库"><a href="#重命名远端仓库" class="headerlink" title="重命名远端仓库"></a>重命名远端仓库</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git remote rename 旧名称 新名称</span><br></pre></td></tr></table></figure>
+
+<h5 id="将远端所有分支和标签的变更都拉到本地"><a href="#将远端所有分支和标签的变更都拉到本地" class="headerlink" title="将远端所有分支和标签的变更都拉到本地"></a>将远端所有分支和标签的变更都拉到本地</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git fetch remote</span><br></pre></td></tr></table></figure>
+
+<h5 id="将远端分支的变更拉到本地，且merge到本地分支"><a href="#将远端分支的变更拉到本地，且merge到本地分支" class="headerlink" title="将远端分支的变更拉到本地，且merge到本地分支"></a>将远端分支的变更拉到本地，且merge到本地分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git pull origin 分支名</span><br></pre></td></tr></table></figure>
+
+<h5 id="将本地分支push到远端"><a href="#将本地分支push到远端" class="headerlink" title="将本地分支push到远端"></a>将本地分支push到远端</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除远端分支"><a href="#删除远端分支" class="headerlink" title="删除远端分支"></a>删除远端分支</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">git push remote --delete 远端分支名</span><br><span class="line">git push remote :远端分支名</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算任意多边形面积</title>
     <url>/2023/01/31/%E8%AE%A1%E7%AE%97%E4%BB%BB%E6%84%8F%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF/</url>
     <content><![CDATA[<p>首先从简单的使用两个向量计算三角形面积进行推导，找到通过分解多边形为三角形进行计算的方法，再通过数学推导出简单通用的公式。</p>
