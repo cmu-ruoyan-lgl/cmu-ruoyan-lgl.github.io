@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"cmu-ruoyan-lgl.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/b6dbddb6.js","daovoice")
+ daovoice('init', {
+  app_id: "7137ef47"
+});
+daovoice('update');
+ </script>
+
+    <meta name="description" content="整理在leetcode刷题经常用到的函数。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="刷题常用函数">
+<meta property="og:url" content="https://cmu-ruoyan-lgl.github.io/2023/02/14/%E5%88%B7%E9%A2%98%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="_lgl の blog">
+<meta property="og:description" content="整理在leetcode刷题经常用到的函数。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-14T11:35:19.000Z">
+<meta property="article:modified_time" content="2023-02-14T13:06:02.311Z">
+<meta property="article:author" content="RuoYan">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="春招复习">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://cmu-ruoyan-lgl.github.io/2023/02/14/%E5%88%B7%E9%A2%98%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://cmu-ruoyan-lgl.github.io/2023/02/14/%E5%88%B7%E9%A2%98%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/","path":"2023/02/14/刷题常用函数/","title":"刷题常用函数"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>刷题常用函数 | _lgl の blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">_lgl の blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">和每一个即将分别的朋友大方拥抱，微笑告别</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#char-toupper-char-c"><span class="nav-number">1.</span> <span class="nav-text">char toupper(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#char-tolower-char-c"><span class="nav-number">2.</span> <span class="nav-text">char tolower(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bool-isalpha-char-c"><span class="nav-number">3.</span> <span class="nav-text">bool isalpha(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bool-isalnum-char-c"><span class="nav-number">4.</span> <span class="nav-text">bool isalnum(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bool-isdigit-char-c"><span class="nav-number">5.</span> <span class="nav-text">bool isdigit(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bool-isupper-char-c"><span class="nav-number">6.</span> <span class="nav-text">bool isupper(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bool-islower-char-c"><span class="nav-number">7.</span> <span class="nav-text">bool islower(char c)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#int-stoi-const-string-amp-str-size-t-idx-x3D-0-int-base-x3D-10"><span class="nav-number">8.</span> <span class="nav-text">int stoi(const string&amp;str, size_t* idx &#x3D; 0, int base &#x3D; 10)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-to-string-typeNum-val"><span class="nav-number">9.</span> <span class="nav-text">string to_string(typeNum val)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-element-%E8%B5%B7%E5%A7%8B%E8%BF%AD%E4%BB%A3%E5%99%A8-%E7%BB%93%E6%9D%9F%E8%BF%AD%E4%BB%A3%E5%99%A8-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">max_element(起始迭代器, 结束迭代器, 自定义操作函数)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-element-%E8%B5%B7%E5%A7%8B%E8%BF%AD%E4%BB%A3%E5%99%A8-%E7%BB%93%E6%9D%9F%E8%BF%AD%E4%BB%A3%E5%99%A8-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="nav-number">11.</span> <span class="nav-text">min_element(起始迭代器, 结束迭代器, 自定义操作函数)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#accumulate-%E8%B5%B7%E5%A7%8B%E8%BF%AD%E4%BB%A3%E5%99%A8-%E7%BB%93%E6%9D%9F%E8%BF%AD%E4%BB%A3%E5%99%A8-%E5%88%9D%E5%A7%8B%E5%80%BC-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="nav-number">12.</span> <span class="nav-text">accumulate(起始迭代器, 结束迭代器, 初始值, 自定义操作函数)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nth-element-%E8%B5%B7%E5%A7%8B%E8%BF%AD%E4%BB%A3%E5%99%A8-%E8%B5%B7%E5%A7%8B%E8%BF%AD%E4%BB%A3%E5%99%A8-k%EF%BC%8C%E7%BB%93%E6%9D%9F%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%8C-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="nav-number">13.</span> <span class="nav-text">nth_element(起始迭代器,  起始迭代器 + k，结束迭代器， 自定义操作函数)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="RuoYan"
+      src="/images/ruoyan.jpg">
+  <p class="site-author-name" itemprop="name">RuoYan</p>
+  <div class="site-description" itemprop="description">Stay hungry, Stay foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cmu-ruoyan-lgl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cmu-ruoyan-lgl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:cmu.liugelei@gmail.com" title="E-Mail → mailto:cmu.liugelei@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://rqy.moe/" title="https:&#x2F;&#x2F;rqy.moe&#x2F;" rel="noopener" target="_blank">rqy</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.ipandai.club/" title="https:&#x2F;&#x2F;blog.ipandai.club&#x2F;" rel="noopener" target="_blank">EZ4ZZW</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cmu-ruoyan-lgl.github.io/2023/02/14/%E5%88%B7%E9%A2%98%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ruoyan.jpg">
+      <meta itemprop="name" content="RuoYan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="_lgl の blog">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="刷题常用函数 | _lgl の blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          刷题常用函数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-14 19:35:19 / 修改时间：21:06:02" itemprop="dateCreated datePublished" datetime="2023-02-14T19:35:19+08:00">2023-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>整理在leetcode刷题经常用到的函数。</p>
+<span id="more"></span>
+
+<h4 id="char-toupper-char-c"><a href="#char-toupper-char-c" class="headerlink" title="char toupper(char c)"></a>char toupper(char c)</h4><p>​	将小写字母c转为大写字母返回。</p>
+<h4 id="char-tolower-char-c"><a href="#char-tolower-char-c" class="headerlink" title="char tolower(char c)"></a>char tolower(char c)</h4><p>​	将大写字母c转为小写字母返回。</p>
+<h4 id="bool-isalpha-char-c"><a href="#bool-isalpha-char-c" class="headerlink" title="bool isalpha(char c)"></a>bool isalpha(char c)</h4><p>​	判断输入的字符是否为字母，即是否在 “A – Z” 或者 “a – z”之间，是字母则返回true，不是字符则返回false。</p>
+<h4 id="bool-isalnum-char-c"><a href="#bool-isalnum-char-c" class="headerlink" title="bool isalnum(char c)"></a>bool isalnum(char c)</h4><p>判断输入的字符是否为字母或者数字，即是否在 “A – Z” 或者 “a – z” 或者”0 – 9”之间，在这些范围内返回true，不在则返回false。</p>
+<h4 id="bool-isdigit-char-c"><a href="#bool-isdigit-char-c" class="headerlink" title="bool isdigit(char c)"></a>bool isdigit(char c)</h4><p>判断输入的字符是否为数字。</p>
+<h4 id="bool-isupper-char-c"><a href="#bool-isupper-char-c" class="headerlink" title="bool isupper(char c)"></a>bool isupper(char c)</h4><p>判断输入的字符是否为大写字母。</p>
+<h4 id="bool-islower-char-c"><a href="#bool-islower-char-c" class="headerlink" title="bool islower(char c)"></a>bool islower(char c)</h4><p>判断输入的字符是否为小写字母。</p>
+<h4 id="int-stoi-const-string-amp-str-size-t-idx-x3D-0-int-base-x3D-10"><a href="#int-stoi-const-string-amp-str-size-t-idx-x3D-0-int-base-x3D-10" class="headerlink" title="int stoi(const string&amp;str, size_t* idx &#x3D; 0, int base &#x3D; 10)"></a>int stoi(const string&amp;str, size_t* idx &#x3D; 0, int base &#x3D; 10)</h4><p>从下标idx开始，将str中找到的第一个数字部分按照base进制转成10进制数返回。</p>
+<p>如果 idx不是空指针，则该函数还会将 idx的值设置为 str 中第一个字符在数字之后的位置。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://cplusplus.com/reference/string/stoi/">https://cplusplus.com/reference/string/stoi/</a></p>
+<h4 id="string-to-string-typeNum-val"><a href="#string-to-string-typeNum-val" class="headerlink" title="string to_string(typeNum val)"></a>string to_string(typeNum val)</h4><p>将val转成字符串返回。</p>
+<h4 id="max-element-起始迭代器-结束迭代器-自定义操作函数"><a href="#max-element-起始迭代器-结束迭代器-自定义操作函数" class="headerlink" title="max_element(起始迭代器, 结束迭代器, 自定义操作函数)"></a>max_element(起始迭代器, 结束迭代器, 自定义操作函数)</h4><p>返回最大值的地址，最大值的判断方法由第三个自定义操作函数定义，若函数没有第三参数则按数值大小。</p>
+<h4 id="min-element-起始迭代器-结束迭代器-自定义操作函数"><a href="#min-element-起始迭代器-结束迭代器-自定义操作函数" class="headerlink" title="min_element(起始迭代器, 结束迭代器, 自定义操作函数)"></a>min_element(起始迭代器, 结束迭代器, 自定义操作函数)</h4><p>同max_element(起始迭代器, 结束迭代器, 自定义操作函数)。</p>
+<h4 id="accumulate-起始迭代器-结束迭代器-初始值-自定义操作函数"><a href="#accumulate-起始迭代器-结束迭代器-初始值-自定义操作函数" class="headerlink" title="accumulate(起始迭代器, 结束迭代器, 初始值, 自定义操作函数)"></a>accumulate(起始迭代器, 结束迭代器, 初始值, 自定义操作函数)</h4><p>求和：无第四个参数默认进行+运算，也可用于字符串拼接。</p>
+<p>乘积：multiplies<int>()， 初始值设为1。</int></p>
+<p>自定义函数：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">myfunction</span> <span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x+<span class="number">2</span>*y;&#125;</span><br><span class="line"><span class="type">int</span> nums[] = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>&#125;;</span><br><span class="line">sum = std::<span class="built_in">accumulate</span>(nums, nums + <span class="number">4</span>, <span class="number">0</span>, myfuction);</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://cplusplus.com/reference/numeric/accumulate/">https://cplusplus.com/reference/numeric/accumulate/</a></p>
+<h4 id="nth-element-起始迭代器-起始迭代器-k，结束迭代器，-自定义操作函数"><a href="#nth-element-起始迭代器-起始迭代器-k，结束迭代器，-自定义操作函数" class="headerlink" title="nth_element(起始迭代器,  起始迭代器 + k，结束迭代器， 自定义操作函数)"></a>nth_element(起始迭代器,  起始迭代器 + k，结束迭代器， 自定义操作函数)</h4><p>默认求第k小的值，把下标为k的数组中的元素放到了正确的位置，对于其他元素就没有进行排序，但是，在k左边的元素都是小于等于它的，而在k右边的元素都是大于等于它的。</p>
+<p>求第k大的，自定义函数写greater<int>()。</int></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">compare</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;<span class="comment">//第k大</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> a[<span class="number">9</span>] = &#123;<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	<span class="type">int</span> b[<span class="number">9</span>] = &#123;<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	<span class="type">int</span> c[<span class="number">9</span>] = &#123;<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	<span class="built_in">nth_element</span>(a,a+<span class="number">2</span>,a+<span class="number">9</span>);</span><br><span class="line">	cout &lt;&lt;<span class="string">&quot;第3小是：&quot;</span>&lt;&lt; a[<span class="number">2</span>] &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">nth_element</span>(b,b+<span class="number">6</span>,b+<span class="number">9</span>);</span><br><span class="line">	<span class="comment">//nth_element(b,b+2,b+9,greater&lt;int&gt;());</span></span><br><span class="line">    cout &lt;&lt;<span class="string">&quot;第3大是：&quot;</span>&lt;&lt; b[<span class="number">6</span>] &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">nth_element</span>(c,c+<span class="number">2</span>,c+<span class="number">9</span>,compare);</span><br><span class="line">	cout &lt;&lt;<span class="string">&quot;第3大是：&quot;</span>&lt;&lt; c[<span class="number">2</span>] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//nth_element得到的元素序列是乱序的，但是第k个元素位置是正确的</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="RuoYan 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="RuoYan 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/note/" rel="tag"># note</a>
+              <a href="/tags/%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A0/" rel="tag"># 春招复习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/04/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/" rel="prev" title="Git常用命令整理">
+                  <i class="fa fa-chevron-left"></i> Git常用命令整理
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">RuoYan</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
